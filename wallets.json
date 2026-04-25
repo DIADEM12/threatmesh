@@ -1,0 +1,54 @@
+{
+  "sensor": {
+    "id": "92c9b8fe-ba84-590b-a8fb-64fe22044552",
+    "state": "LIVE",
+    "walletSetId": "6a2c915e-fe60-562c-89f6-0242d0d6b2c6",
+    "custodyType": "DEVELOPER",
+    "refId": "sensor",
+    "name": "sensor_agent",
+    "address": "0x9d2ec4efcf1ffaad5caf4b1333f47dfaa08ad8f2",
+    "blockchain": "ARC-TESTNET",
+    "accountType": "EOA",
+    "updateDate": "2026-04-06T13:28:00Z",
+    "createDate": "2026-04-06T13:28:00Z"
+  },
+  "enrichment": {
+    "id": "2341c176-6faf-5551-a3d4-76285ac3b293",
+    "state": "LIVE",
+    "walletSetId": "6a2c915e-fe60-562c-89f6-0242d0d6b2c6",
+    "custodyType": "DEVELOPER",
+    "refId": "enrichment",
+    "name": "enrichment_agent",
+    "address": "0x8d4bfa0aa88327b7666374674231d51c61008f5b",
+    "blockchain": "ARC-TESTNET",
+    "accountType": "EOA",
+    "updateDate": "2026-04-06T13:28:01Z",
+    "createDate": "2026-04-06T13:28:01Z"
+  },
+  "verification": {
+    "id": "99723ef6-1e97-5966-870b-acbcac6af49b",
+    "state": "LIVE",
+    "walletSetId": "6a2c915e-fe60-562c-89f6-0242d0d6b2c6",
+    "custodyType": "DEVELOPER",
+    "refId": "verification",
+    "name": "verification_agent",
+    "address": "0x79f38203529ea062094f1d30cf5756c45ba7d3e9",
+    "blockchain": "ARC-TESTNET",
+    "accountType": "EOA",
+    "updateDate": "2026-04-06T13:28:03Z",
+    "createDate": "2026-04-06T13:28:03Z"
+  },
+  "consumer": {
+    "id": "d3ecb1c9-2858-525e-88bb-442142919598",
+    "state": "LIVE",
+    "walletSetId": "6a2c915e-fe60-562c-89f6-0242d0d6b2c6",
+    "custodyType": "DEVELOPER",
+    "refId": "consumer",
+    "name": "consumer_agent",
+    "address": "0xb0a0c862070745acd17c85e12e08ef74b6cc15fe",
+    "blockchain": "ARC-TESTNET",
+    "accountType": "EOA",
+    "updateDate": "2026-04-06T13:28:03Z",
+    "createDate": "2026-04-06T13:28:03Z"
+  }
+}

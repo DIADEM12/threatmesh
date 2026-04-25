@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ThreatMesh</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #080c10;
+  --surface: #0e1519;
+  --surface2: #131c22;
+  --border: rgba(255,255,255,0.06);
+  --border-bright: rgba(255,255,255,0.12);
+  --text: #e8edf2;
+  --text-2: #7a9aaa;
+  --text-3: #3d5a68;
+  --cyan: #3de8c8;
+  --cyan-dim: rgba(61,232,200,0.12);
+  --red: #ff5c5c;
+  --red-dim: rgba(255,92,92,0.1);
+  --amber: #f5a623;
+  --amber-dim: rgba(245,166,35,0.1);
+  --yellow: #ffe066;
+  --yellow-dim: rgba(255,224,102,0.08);
+  --green: #52d68a;
+  --green-dim: rgba(82,214,138,0.1);
+  --blue: #5b9cf6;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 14px; line-height: 1.6; min-height: 100vh; }
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 2px; }
+
+header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 40px; border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(8,12,16,0.94); backdrop-filter: blur(20px);
+}
+.brand { display: flex; align-items: center; gap: 16px; }
+.brand-mark svg { width: 32px; height: 32px; }
+.brand-name { font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; }
+.brand-sub { font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-3); letter-spacing: 0.08em; margin-top: 1px; }
+.header-center { display: flex; align-items: center; gap: 8px; }
+.live-pill {
+  display: flex; align-items: center; gap: 7px; padding: 5px 12px;
+  background: var(--green-dim); border: 1px solid rgba(82,214,138,0.2);
+  border-radius: 100px; font-family: var(--font-mono); font-size: 0.62rem; color: var(--green); letter-spacing: 0.06em;
+}
+.live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: blink 1.8s ease-in-out infinite; }
+@keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
+.net-pill { padding: 5px 12px; background: var(--surface); border: 1px solid var(--border-bright); border-radius: 100px; font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-2); letter-spacing: 0.06em; }
+.header-actions { display: flex; align-items: center; gap: 10px; }
+.scanner-wrap { display: flex; align-items: center; gap: 8px; }
+.scanner-label { font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-2); letter-spacing: 0.06em; }
+.toggle { position: relative; width: 40px; height: 22px; cursor: pointer; display: block; }
+.toggle input { display: none; }
+.toggle-track { position: absolute; inset: 0; background: var(--surface2); border: 1px solid var(--border-bright); border-radius: 100px; transition: all 0.25s; }
+.toggle-thumb { position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: 50%; background: var(--text-3); transition: all 0.25s; }
+.toggle input:checked ~ .toggle-track { background: var(--cyan-dim); border-color: var(--cyan); }
+.toggle input:checked ~ .toggle-thumb { left: 21px; background: var(--cyan); }
+.btn { display: flex; align-items: center; gap: 7px; padding: 8px 18px; border-radius: 8px; font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; cursor: pointer; border: 1px solid var(--border-bright); background: var(--surface); color: var(--text); transition: all 0.15s; }
+.btn:hover { background: var(--surface2); border-color: rgba(255,255,255,0.2); }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn:active { transform: scale(0.98); }
+.btn-primary { background: var(--cyan); border-color: var(--cyan); color: #080c10; font-weight: 500; }
+.btn-primary:hover { background: #5af0d5; border-color: #5af0d5; }
+.btn.running { position: relative; overflow: hidden; }
+.btn.running::after { content:''; position:absolute; inset:0; background: linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent); animation: shimmer 1.2s linear infinite; }
+@keyframes shimmer { from { transform:translateX(-100%); } to { transform:translateX(100%); } }
+
+main { padding: 32px 40px; display: flex; flex-direction: column; gap: 24px; }
+
+.stats { display: grid; grid-template-columns: repeat(5,1fr); gap: 12px; }
+.stat { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; transition: border-color 0.2s; }
+.stat:hover { border-color: var(--border-bright); }
+.stat-label { font-family: var(--font-mono); font-size: 0.6rem; color: var(--text-3); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
+.stat-value { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--text); line-height: 1; letter-spacing: -0.02em; }
+.stat-value.cyan { color: var(--cyan); }
+.stat-value.green { color: var(--green); }
+.stat-value.amber { color: var(--amber); }
+.stat-sub { font-size: 0.68rem; color: var(--text-3); margin-top: 6px; }
+
+.grid-top { display: grid; grid-template-columns: 260px 1fr 1fr; gap: 16px; align-items: start; }
+.grid-bottom { display: grid; grid-template-columns: 1fr 1fr 300px; gap: 16px; align-items: start; }
+
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.panel-head { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid var(--border); }
+.panel-title { font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-2); letter-spacing: 0.1em; text-transform: uppercase; }
+.panel-meta { font-family: var(--font-mono); font-size: 0.6rem; color: var(--text-3); }
+.panel-body { padding: 16px 20px; max-height: 360px; overflow-y: auto; }
+
+.pipe { display: flex; flex-direction: column; }
+.pipe-item { display: flex; gap: 14px; padding: 8px 0; }
+.pipe-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; width: 28px; }
+.pipe-node { width: 28px; height: 28px; border-radius: 8px; background: var(--surface2); border: 1px solid var(--border-bright); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-2); flex-shrink: 0; transition: all 0.3s; }
+.pipe-node.active { background: var(--cyan-dim); border-color: var(--cyan); color: var(--cyan); }
+.pipe-connector { width: 1px; flex: 1; min-height: 12px; background: var(--border); margin: 3px 0; }
+.pipe-content { flex: 1; padding-top: 2px; }
+.pipe-name { font-size: 0.8rem; font-weight: 500; color: var(--text); margin-bottom: 1px; }
+.pipe-desc { font-size: 0.68rem; color: var(--text-3); line-height: 1.4; }
+.pipe-share { font-family: var(--font-mono); font-size: 0.6rem; color: var(--cyan); margin-top: 3px; }
+
+.activity { display: flex; flex-direction: column; gap: 1px; }
+.activity-item { display: grid; grid-template-columns: 54px 72px 1fr; gap: 10px; align-items: start; padding: 7px 8px; border-radius: 7px; transition: background 0.1s; }
+.activity-item:hover { background: var(--surface2); }
+.activity-time { font-family: var(--font-mono); font-size: 0.58rem; color: var(--text-3); padding-top: 2px; white-space: nowrap; }
+.activity-tag { font-family: var(--font-mono); font-size: 0.56rem; padding: 2px 7px; border-radius: 4px; white-space: nowrap; text-align: center; }
+.tag-sensor { background: rgba(91,156,246,0.12); color: var(--blue); }
+.tag-enrichment { background: rgba(245,166,35,0.1); color: var(--amber); }
+.tag-verification { background: rgba(82,214,138,0.1); color: var(--green); }
+.tag-consumer { background: rgba(61,232,200,0.1); color: var(--cyan); }
+.tag-payment { background: rgba(255,224,102,0.08); color: var(--yellow); }
+.tag-transaction { background: rgba(82,214,138,0.1); color: var(--green); }
+.tag-marketplace { background: rgba(61,232,200,0.1); color: var(--cyan); }
+.tag-scanner { background: rgba(255,92,92,0.08); color: var(--red); }
+.tag-balances { background: rgba(255,255,255,0.04); color: var(--text-3); }
+.activity-msg { font-size: 0.72rem; color: var(--text-2); line-height: 1.5; }
+.activity-msg.hi { color: var(--text); }
+
+.threats { display: flex; flex-direction: column; gap: 8px; }
+.threat-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; transition: border-color 0.15s; }
+.threat-card:hover { border-color: var(--border-bright); }
+.threat-card.critical { border-left: 3px solid var(--red); }
+.threat-card.high { border-left: 3px solid var(--amber); }
+.threat-card.medium { border-left: 3px solid var(--yellow); }
+.threat-card.low { border-left: 3px solid var(--green); }
+.threat-row1 { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.threat-name { font-size: 0.78rem; font-weight: 500; color: var(--text); text-transform: uppercase; letter-spacing: 0.04em; }
+.sev { font-family: var(--font-mono); font-size: 0.56rem; padding: 2px 8px; border-radius: 4px; letter-spacing: 0.06em; }
+.sev.critical { background: var(--red-dim); color: var(--red); }
+.sev.high { background: var(--amber-dim); color: var(--amber); }
+.sev.medium { background: var(--yellow-dim); color: var(--yellow); }
+.sev.low { background: var(--green-dim); color: var(--green); }
+.threat-row2 { display: flex; gap: 12px; flex-wrap: wrap; }
+.threat-meta { font-family: var(--font-mono); font-size: 0.58rem; color: var(--text-3); }
+.threat-meta span { color: var(--text-2); }
+.threat-action { font-size: 0.68rem; color: var(--text-3); margin-top: 6px; line-height: 1.4; }
+
+.market { display: flex; flex-direction: column; gap: 6px; }
+.market-filters { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+.filter-btn { padding: 4px 12px; border-radius: 100px; font-family: var(--font-mono); font-size: 0.58rem; cursor: pointer; border: 1px solid var(--border); background: transparent; color: var(--text-3); transition: all 0.15s; letter-spacing: 0.04em; }
+.filter-btn:hover { border-color: var(--border-bright); color: var(--text-2); }
+.filter-btn.active { background: var(--cyan-dim); border-color: var(--cyan); color: var(--cyan); }
+.listing { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding: 11px 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; transition: border-color 0.15s; }
+.listing:hover { border-color: var(--border-bright); }
+.listing.sold { opacity: 0.4; }
+.listing-name { font-size: 0.76rem; font-weight: 500; color: var(--text); margin-bottom: 3px; text-transform: uppercase; letter-spacing: 0.03em; }
+.listing-meta { font-family: var(--font-mono); font-size: 0.58rem; color: var(--text-3); display: flex; gap: 10px; flex-wrap: wrap; }
+.listing-meta span { color: var(--text-2); }
+.listing-right { text-align: right; }
+.listing-price { font-family: var(--font-mono); font-size: 0.8rem; color: var(--cyan); font-weight: 500; }
+.listing-status { font-family: var(--font-mono); font-size: 0.56rem; margin-top: 3px; }
+.listing-status.available { color: var(--green); }
+.listing-status.sold { color: var(--text-3); }
+
+.econ { display: flex; flex-direction: column; }
+.econ-row { display: flex; align-items: center; justify-content: space-between; padding: 13px 0; border-bottom: 1px solid var(--border); }
+.econ-row:last-child { border-bottom: none; }
+.econ-agent { display: flex; align-items: center; gap: 10px; }
+.econ-dot { width: 8px; height: 8px; border-radius: 50%; }
+.econ-dot.sensor { background: var(--blue); }
+.econ-dot.enrichment { background: var(--amber); }
+.econ-dot.verification { background: var(--green); }
+.econ-name { font-size: 0.76rem; color: var(--text-2); }
+.econ-right { text-align: right; }
+.econ-amount { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text); }
+.econ-pct { font-family: var(--font-mono); font-size: 0.58rem; color: var(--text-3); margin-top: 1px; }
+.savings { margin-top: 16px; padding: 14px 16px; background: var(--surface2); border-radius: 8px; }
+.savings-row { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.6rem; color: var(--text-3); margin-bottom: 10px; }
+.savings-bar { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+.savings-fill { height: 100%; width: 99.4%; background: linear-gradient(90deg, var(--cyan), var(--green)); border-radius: 2px; }
+.savings-labels { display: flex; justify-content: space-between; margin-top: 6px; font-family: var(--font-mono); font-size: 0.56rem; }
+
+.modes { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+.mode-card { padding: 13px 16px; background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; }
+.mode-card.push { border-left: 3px solid var(--blue); }
+.mode-card.pull { border-left: 3px solid var(--cyan); }
+.mode-card.noupdate { border-left: 3px solid var(--text-3); }
+.mode-tag { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.08em; margin-bottom: 2px; }
+.mode-card.push .mode-tag { color: var(--blue); }
+.mode-card.pull .mode-tag { color: var(--cyan); }
+.mode-card.noupdate .mode-tag { color: var(--text-3); }
+.mode-desc { font-size: 0.7rem; color: var(--text-3); }
+.mode-count { font-family: var(--font-display); font-size: 1.7rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text-3); }
+.mode-card.push .mode-count { color: var(--blue); }
+.mode-card.pull .mode-count { color: var(--cyan); }
+
+.wallets { display: flex; flex-direction: column; gap: 8px; }
+.wallet-item { display: flex; align-items: center; justify-content: space-between; padding: 13px 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; }
+.wallet-left { display: flex; align-items: center; gap: 12px; }
+.wallet-avatar { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.62rem; font-weight: 500; }
+.wallet-avatar.sensor { background: rgba(91,156,246,0.12); color: var(--blue); }
+.wallet-avatar.enrichment { background: rgba(245,166,35,0.1); color: var(--amber); }
+.wallet-avatar.verification { background: rgba(82,214,138,0.1); color: var(--green); }
+.wallet-avatar.consumer { background: rgba(61,232,200,0.1); color: var(--cyan); }
+.wallet-name { font-size: 0.78rem; font-weight: 500; color: var(--text); margin-bottom: 1px; }
+.wallet-addr { font-family: var(--font-mono); font-size: 0.56rem; color: var(--text-3); }
+.wallet-usdc { font-family: var(--font-mono); font-size: 0.82rem; color: var(--text); font-weight: 500; }
+.wallet-label { font-family: var(--font-mono); font-size: 0.56rem; color: var(--text-3); margin-top: 1px; text-align: right; }
+
+.empty { text-align: center; padding: 28px 20px; font-size: 0.7rem; color: var(--text-3); font-family: var(--font-mono); }
+@keyframes fadeUp { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+.fade-in { animation: fadeUp 0.25s ease forwards; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="brand-mark">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="6" y="6" width="20" height="20" rx="4" stroke="#3de8c8" stroke-width="1.5" fill="none"/>
+        <rect x="11" y="11" width="10" height="10" rx="2" fill="rgba(61,232,200,0.15)" stroke="#3de8c8" stroke-width="1"/>
+        <circle cx="16" cy="16" r="2.5" fill="#3de8c8"/>
+      </svg>
+    </div>
+    <div>
+      <div class="brand-name">ThreatMesh</div>
+      <div class="brand-sub">Intelligence Marketplace // Arc Testnet</div>
+    </div>
+  </div>
+
+  <div class="header-center">
+    <div class="live-pill"><div class="live-dot"></div>Live</div>
+    <div class="net-pill">ARC-TESTNET // USDC</div>
+  </div>
+
+  <div class="header-actions">
+    <div class="scanner-wrap">
+      <span class="scanner-label">Auto-Scan</span>
+      <label class="toggle">
+        <input type="checkbox" id="scanner-toggle" onchange="toggleScanner(this.checked)">
+        <div class="toggle-track"></div>
+        <div class="toggle-thumb"></div>
+      </label>
+    </div>
+    <button class="btn" id="pull-btn" onclick="triggerPull()">Request Intel</button>
+    <button class="btn btn-primary" id="push-btn" onclick="triggerPush()">Detect Threat</button>
+  </div>
+</header>
+
+<main>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-label">Pipeline Runs</div>
+      <div class="stat-value" id="s-runs">0</div>
+      <div class="stat-sub">total executions</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Transactions</div>
+      <div class="stat-value cyan" id="s-txs">0</div>
+      <div class="stat-sub">on-chain Arc testnet</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">USDC Spent</div>
+      <div class="stat-value amber" id="s-usdc">$0.000</div>
+      <div class="stat-sub">total marketplace value</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Intel Purchased</div>
+      <div class="stat-value green" id="s-purchases">0</div>
+      <div class="stat-sub">threats actioned</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Gas Savings</div>
+      <div class="stat-value" id="s-savings">99.4%</div>
+      <div class="stat-sub">vs Ethereum</div>
+    </div>
+  </div>
+
+  <div class="grid-top">
+
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">Agent Pipeline</span>
+        <span class="panel-meta" id="pipeline-status">Idle</span>
+      </div>
+      <div class="panel-body">
+        <div class="pipe">
+          <div class="pipe-item">
+            <div class="pipe-left">
+              <div class="pipe-node" id="node-s">S</div>
+              <div class="pipe-connector"></div>
+            </div>
+            <div class="pipe-content">
+              <div class="pipe-name">Sensor Agent</div>
+              <div class="pipe-desc">Scans 55+ threat types across OSINT, CVE feeds and honeypots</div>
+              <div class="pipe-share">Earns 50% of sale</div>
+            </div>
+          </div>
+          <div class="pipe-item">
+            <div class="pipe-left">
+              <div class="pipe-node" id="node-e">E</div>
+              <div class="pipe-connector"></div>
+            </div>
+            <div class="pipe-content">
+              <div class="pipe-name">Enrichment Agent</div>
+              <div class="pipe-desc">MITRE ATT&CK mapping, actor identification, severity pricing</div>
+              <div class="pipe-share">Earns 30% of sale</div>
+            </div>
+          </div>
+          <div class="pipe-item">
+            <div class="pipe-left">
+              <div class="pipe-node" id="node-v">V</div>
+              <div class="pipe-connector"></div>
+            </div>
+            <div class="pipe-content">
+              <div class="pipe-name">Verification Agent</div>
+              <div class="pipe-desc">9-point trust scoring, fingerprinting, marketplace listing</div>
+              <div class="pipe-share">Earns 20% of sale</div>
+            </div>
+          </div>
+          <div class="pipe-item">
+            <div class="pipe-left">
+              <div class="pipe-node" id="node-c">C</div>
+            </div>
+            <div class="pipe-content">
+              <div class="pipe-name">Consumer Agent</div>
+              <div class="pipe-desc">Reviews listings autonomously, buys intel, applies defenses</div>
+              <div class="pipe-share">Pays per threat // $0.002 query fee</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">Live Activity</span>
+        <span class="panel-meta" id="event-count">0 events</span>
+      </div>
+      <div class="panel-body" id="activity-body">
+        <div class="empty">Waiting for activity...</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">Threat Feed</span>
+        <span class="panel-meta" id="threat-count">0 detected</span>
+      </div>
+      <div class="panel-body" id="threat-body">
+        <div class="empty">No threats yet</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="grid-bottom">
+
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">Marketplace Listings</span>
+        <span class="panel-meta" id="listing-count">0 listings</span>
+      </div>
+      <div class="panel-body">
+        <div class="market-filters">
+          <button class="filter-btn active" onclick="filterListings('all',this)">All</button>
+          <button class="filter-btn" onclick="filterListings('available',this)">Available</button>
+          <button class="filter-btn" onclick="filterListings('sold',this)">Sold</button>
+          <button class="filter-btn" onclick="filterListings('critical',this)">Critical</button>
+          <button class="filter-btn" onclick="filterListings('high',this)">High</button>
+        </div>
+        <div class="market" id="market-body">
+          <div class="empty">No listings yet</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">Revenue Distribution</span>
+        <span class="panel-meta">Per-action settlement on Arc</span>
+      </div>
+      <div class="panel-body">
+        <div class="econ">
+          <div class="econ-row">
+            <div class="econ-agent"><div class="econ-dot sensor"></div><div class="econ-name">Sensor Agent</div></div>
+            <div class="econ-right"><div class="econ-amount" id="econ-s">$0.000</div><div class="econ-pct">50% share</div></div>
+          </div>
+          <div class="econ-row">
+            <div class="econ-agent"><div class="econ-dot enrichment"></div><div class="econ-name">Enrichment Agent</div></div>
+            <div class="econ-right"><div class="econ-amount" id="econ-e">$0.000</div><div class="econ-pct">30% share</div></div>
+          </div>
+          <div class="econ-row">
+            <div class="econ-agent"><div class="econ-dot verification"></div><div class="econ-name">Verification Agent</div></div>
+            <div class="econ-right"><div class="econ-amount" id="econ-v">$0.000</div><div class="econ-pct">20% share</div></div>
+          </div>
+        </div>
+        <div class="savings">
+          <div class="savings-row">
+            <span>Arc cost: <span style="color:var(--cyan)">$0.009 avg</span></span>
+            <span>Ethereum: <span style="color:var(--red)">~$1.50+</span></span>
+          </div>
+          <div class="savings-bar"><div class="savings-fill"></div></div>
+          <div class="savings-labels">
+            <span style="color:var(--cyan)">Arc (0.6%)</span>
+            <span style="color:var(--text-3)">99.4% cheaper</span>
+            <span style="color:var(--red)">Ethereum</span>
+          </div>
+        </div>
+        <div class="modes">
+          <div class="mode-card push">
+            <div><div class="mode-tag">PUSH MODE</div><div class="mode-desc">Sensor-initiated sale</div></div>
+            <div class="mode-count" id="m-push">0</div>
+          </div>
+          <div class="mode-card pull">
+            <div><div class="mode-tag">PULL MODE</div><div class="mode-desc">Consumer-requested intel</div></div>
+            <div class="mode-count" id="m-pull">0</div>
+          </div>
+          <div class="mode-card noupdate">
+            <div><div class="mode-tag">NO UPDATE</div><div class="mode-desc">Query fee retained</div></div>
+            <div class="mode-count" id="m-none">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">Wallet Balances</span>
+        <span class="panel-meta">Live USDC</span>
+      </div>
+      <div class="panel-body">
+        <div class="wallets">
+          <div class="wallet-item">
+            <div class="wallet-left">
+              <div class="wallet-avatar sensor">S</div>
+              <div><div class="wallet-name">Sensor Agent</div><div class="wallet-addr" id="addr-s">--</div></div>
+            </div>
+            <div><div class="wallet-usdc" id="bal-s">-- USDC</div><div class="wallet-label">balance</div></div>
+          </div>
+          <div class="wallet-item">
+            <div class="wallet-left">
+              <div class="wallet-avatar enrichment">E</div>
+              <div><div class="wallet-name">Enrichment Agent</div><div class="wallet-addr" id="addr-e">--</div></div>
+            </div>
+            <div><div class="wallet-usdc" id="bal-e">-- USDC</div><div class="wallet-label">balance</div></div>
+          </div>
+          <div class="wallet-item">
+            <div class="wallet-left">
+              <div class="wallet-avatar verification">V</div>
+              <div><div class="wallet-name">Verification Agent</div><div class="wallet-addr" id="addr-v">--</div></div>
+            </div>
+            <div><div class="wallet-usdc" id="bal-v">-- USDC</div><div class="wallet-label">balance</div></div>
+          </div>
+          <div class="wallet-item">
+            <div class="wallet-left">
+              <div class="wallet-avatar consumer">C</div>
+              <div><div class="wallet-name">Consumer Agent</div><div class="wallet-addr" id="addr-c">--</div></div>
+            </div>
+            <div><div class="wallet-usdc" id="bal-c">-- USDC</div><div class="wallet-label">balance</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script>
+let allListings = [];
+  let currentFilter = 'all';
+  let pipelineActive = false;
+
+  function fmtTime(iso) {
+    return new Date(iso).toLocaleTimeString('en-GB', {hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  }
+
+  function shortAddr(addr) {
+    if (!addr) return '--';
+    return addr.slice(0,6) + '...' + addr.slice(-4);
+  }
+
+  async function fetchJSON(url) {
+    const res = await fetch(url + '?t=' + Date.now());
+    if (!res.ok) return null;
+    return res.json();
+  }
+
+  async function loadWallets() {
+    try {
+      const data = await fetchJSON('/api/wallets');
+      if (!data) return;
+      if (data.sensor) document.getElementById('addr-s').textContent = shortAddr(data.sensor.address);
+      if (data.enrichment) document.getElementById('addr-e').textContent = shortAddr(data.enrichment.address);
+      if (data.verification) document.getElementById('addr-v').textContent = shortAddr(data.verification.address);
+      if (data.consumer) document.getElementById('addr-c').textContent = shortAddr(data.consumer.address);
+    } catch(e) { console.log('wallets error', e); }
+  }
+
+  async function loadScannerState() {
+    try {
+      const data = await fetchJSON('/api/scanner');
+      if (!data) return;
+      document.getElementById('scanner-toggle').checked = data.enabled;
+    } catch(e) {}
+  }
+
+  async function toggleScanner(enabled) {
+    try {
+      await fetch('/api/scanner/toggle', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({enabled})
+      });
+    } catch(e) {}
+  }
+
+  async function triggerPush() {
+    if (pipelineActive) return;
+    pipelineActive = true;
+    const btn = document.getElementById('push-btn');
+    const pullBtn = document.getElementById('pull-btn');
+    btn.disabled = true; btn.classList.add('running'); btn.textContent = 'Running...';
+    pullBtn.disabled = true;
+    document.getElementById('pipeline-status').textContent = 'Push Active';
+    activateNodes(['node-s','node-e','node-v','node-c']);
+    try {
+      await fetch('/api/run', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({mode:'push'})
+      });
+    } catch(e) {}
+    setTimeout(() => {
+      pipelineActive = false;
+      btn.disabled = false; btn.classList.remove('running'); btn.textContent = 'Detect Threat';
+      pullBtn.disabled = false;
+      document.getElementById('pipeline-status').textContent = 'Idle';
+      deactivateNodes();
+    }, 13000);
+  }
+
+  async function triggerPull() {
+    if (pipelineActive) return;
+    pipelineActive = true;
+    const btn = document.getElementById('pull-btn');
+    const pushBtn = document.getElementById('push-btn');
+    btn.disabled = true; btn.classList.add('running'); btn.textContent = 'Querying...';
+    pushBtn.disabled = true;
+    document.getElementById('pipeline-status').textContent = 'Pull Active';
+    activateNodes(['node-c','node-v','node-e','node-s']);
+    try {
+      await fetch('/api/run', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({mode:'pull'})
+      });
+    } catch(e) {}
+    setTimeout(() => {
+      pipelineActive = false;
+      btn.disabled = false; btn.classList.remove('running'); btn.textContent = 'Request Intel';
+      pushBtn.disabled = false;
+      document.getElementById('pipeline-status').textContent = 'Idle';
+      deactivateNodes();
+    }, 16000);
+  }
+
+  function activateNodes(order) {
+    deactivateNodes();
+    let delay = 0;
+    order.forEach(id => {
+      setTimeout(() => document.getElementById(id).classList.add('active'), delay);
+      delay += 2200;
+    });
+  }
+
+  function deactivateNodes() {
+    ['node-s','node-e','node-v','node-c'].forEach(id => {
+      document.getElementById(id).classList.remove('active');
+    });
+  }
+
+  async function loadEvents() {
+    try {
+      const events = await fetchJSON('/api/events');
+      if (!events) return;
+      document.getElementById('event-count').textContent = events.length + ' events';
+      const body = document.getElementById('activity-body');
+      body.innerHTML = '';
+      const wrap = document.createElement('div');
+      wrap.className = 'activity';
+      [...events].reverse().slice(0,80).forEach((ev, i) => {
+        const div = document.createElement('div');
+        div.className = 'activity-item' + (i < 4 ? ' fade-in' : '');
+        const isHi = ev.type === 'transaction' || ev.type === 'marketplace';
+        div.innerHTML =
+          '<span class="activity-time">' + fmtTime(ev.time) + '</span>' +
+          '<span class="activity-tag tag-' + (ev.type||'sensor') + '">' + (ev.type||'') + '</span>' +
+          '<span class="activity-msg' + (isHi ? ' hi' : '') + '">' + ev.message + '</span>';
+        wrap.appendChild(div);
+      });
+      body.appendChild(wrap);
+    } catch(e) { console.log('events error', e); }
+  }
+
+  async function loadLog() {
+    try {
+      const log = await fetchJSON('/api/log');
+      if (!log || !log.length) return;
+      const purchases = log.filter(r => r.action === 'purchased');
+      const noUpdates = log.filter(r => r.action === 'no_update');
+      const pushRuns = log.filter(r => r.mode === 'push');
+      const pullRuns = log.filter(r => r.mode === 'pull');
+      const totalUsdc = purchases.reduce((s,r) => s+(r.sale_price||0),0)
+                      + log.reduce((s,r) => s+(r.query_fee_paid||0),0);
+      const totalTxs = purchases.length * 5 + noUpdates.length * 2;
+
+      document.getElementById('s-runs').textContent = log.length;
+      document.getElementById('s-txs').textContent = totalTxs;
+      document.getElementById('s-usdc').textContent = '$' + totalUsdc.toFixed(3);
+      document.getElementById('s-purchases').textContent = purchases.length;
+      document.getElementById('m-push').textContent = pushRuns.length;
+      document.getElementById('m-pull').textContent = pullRuns.length;
+      document.getElementById('m-none').textContent = noUpdates.length;
+
+      const sT = purchases.reduce((s,r) => s+(r.revenue_share?.sensor||0),0);
+      const eT = purchases.reduce((s,r) => s+(r.revenue_share?.enrichment||0),0);
+      const vT = purchases.reduce((s,r) => s+(r.revenue_share?.verification||0),0);
+      document.getElementById('econ-s').textContent = '$' + sT.toFixed(3);
+      document.getElementById('econ-e').textContent = '$' + eT.toFixed(3);
+      document.getElementById('econ-v').textContent = '$' + vT.toFixed(3);
+
+      const withBal = [...log].reverse().find(r => r.balances && Object.keys(r.balances).length);
+      if (withBal?.balances) {
+        const b = withBal.balances;
+        if (b.sensor !== undefined) document.getElementById('bal-s').textContent = Number(b.sensor).toFixed(4) + ' USDC';
+        if (b.enrichment !== undefined) document.getElementById('bal-e').textContent = Number(b.enrichment).toFixed(4) + ' USDC';
+        if (b.verification !== undefined) document.getElementById('bal-v').textContent = Number(b.verification).toFixed(4) + ' USDC';
+        if (b.consumer !== undefined) document.getElementById('bal-c').textContent = Number(b.consumer).toFixed(4) + ' USDC';
+      }
+
+      if (purchases.length > 0) {
+        document.getElementById('threat-count').textContent = purchases.length + ' detected';
+        const tbody = document.getElementById('threat-body');
+        tbody.innerHTML = '';
+        const list = document.createElement('div');
+        list.className = 'threats';
+        [...purchases].reverse().slice(0,8).forEach(r => {
+          const div = document.createElement('div');
+          div.className = 'threat-card ' + r.severity;
+          div.innerHTML =
+            '<div class="threat-row1">' +
+              '<span class="threat-name">' + r.threat_type.replace(/_/g,' ') + '</span>' +
+              '<span class="sev ' + r.severity + '">' + r.severity.toUpperCase() + '</span>' +
+            '</div>' +
+            '<div class="threat-row2">' +
+              '<span class="threat-meta">IP: <span>' + r.source_ip + '</span></span>' +
+              '<span class="threat-meta">MITRE: <span>' + (r.mitre_id||'') + '</span></span>' +
+              '<span class="threat-meta">Actor: <span>' + (r.actor||'') + '</span></span>' +
+              '<span class="threat-meta">Feed: <span>' + (r.feed||'') + '</span></span>' +
+            '</div>' +
+            '<div class="threat-action">' + (r.defensive_action||'') + '</div>';
+          list.appendChild(div);
+        });
+        tbody.appendChild(list);
+      }
+    } catch(e) { console.log('log error', e); }
+  }
+
+  async function loadListings() {
+    try {
+      const listings = await fetchJSON('/api/listings');
+      if (!listings) return;
+      allListings = listings;
+      document.getElementById('listing-count').textContent = allListings.length + ' listings';
+      renderListings();
+    } catch(e) { console.log('listings error', e); }
+  }
+
+  function filterListings(filter, btn) {
+    currentFilter = filter;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderListings();
+  }
+
+  function renderListings() {
+    const body = document.getElementById('market-body');
+    let filtered = allListings;
+    if (currentFilter === 'available') filtered = allListings.filter(l => l.status === 'available');
+    else if (currentFilter === 'sold') filtered = allListings.filter(l => l.status === 'sold');
+    else if (currentFilter === 'critical') filtered = allListings.filter(l => l.severity === 'critical');
+    else if (currentFilter === 'high') filtered = allListings.filter(l => l.severity === 'high');
+    if (!filtered.length) {
+      body.innerHTML = '<div class="empty">No listings match filter</div>';
+      return;
+    }
+    body.innerHTML = '';
+    [...filtered].reverse().slice(0,20).forEach(l => {
+      const div = document.createElement('div');
+      div.className = 'listing' + (l.status === 'sold' ? ' sold' : '');
+      div.innerHTML =
+        '<div>' +
+          '<div class="listing-name">' + l.threat_type.replace(/_/g,' ') + '</div>' +
+          '<div class="listing-meta">' +
+            '<span>MITRE: <span>' + l.mitre_id + '</span></span>' +
+            '<span>Actor: <span>' + l.actor + '</span></span>' +
+            '<span>Region: <span>' + l.region + '</span></span>' +
+          '</div>' +
+        '</div>' +
+        '<div class="listing-right">' +
+          '<div class="listing-price">$' + Number(l.sale_price).toFixed(3) + '</div>' +
+          '<div class="listing-status ' + l.status + '">' + l.status.toUpperCase() + '</div>' +
+        '</div>';
+      body.appendChild(div);
+    });
+  }
+
+  async function refreshAll() {
+    await Promise.all([loadEvents(), loadLog(), loadListings()]);
+  }
+
+  // Init
+  loadWallets();
+  loadScannerState();
+  refreshAll();
+
+  // Self-correcting poll — waits for each cycle to finish before starting next
+  function poll() {
+    refreshAll().finally(() => setTimeout(poll, 2000));
+  }
+  setTimeout(poll, 2000);
+</script>
+</body>
+</html>

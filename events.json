@@ -1,0 +1,1403 @@
+[
+  {
+    "time": "2026-04-25T04:05:15.477321+00:00",
+    "type": "verification",
+    "message": "Threat received from Enrichment. Running verification checks...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:05:15.493132+00:00",
+    "type": "verification",
+    "message": "Checks passed: 9/9 | Trust score: 1.0",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:05:15.514016+00:00",
+    "type": "marketplace",
+    "message": "Intel listed | ID: e8e0b555 | Price: $0.018 USDC",
+    "data": {
+      "listing_id": "e8e0b555",
+      "threat_id": "1b5d96fe",
+      "threat_type": "ssrf_exploit",
+      "severity": "critical",
+      "sale_price": 0.018,
+      "mitre_id": "T1190",
+      "tactic": "Initial Access",
+      "actor": "APT-41",
+      "trust_score": 1.0,
+      "fingerprint": "22cc0912d73d92bb",
+      "region": "China",
+      "feed": "CVE Database",
+      "status": "available",
+      "listed_at": "2026-04-25T04:05:15.511791+00:00"
+    }
+  },
+  {
+    "time": "2026-04-25T04:05:15.529212+00:00",
+    "type": "verification",
+    "message": "Notifying Consumer Agent that intel is ready for purchase...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:05:15.625271+00:00",
+    "type": "consumer",
+    "message": "Response received: Intel available | SSRF EXPLOIT | $0.018 USDC",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:05:15.629568+00:00",
+    "type": "consumer",
+    "message": "Purchase decision: APPROVED | Listing: e8e0b555 | Price: $0.018 USDC",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:05:15.645686+00:00",
+    "type": "payment",
+    "message": "Consumer -> Verification: $0.018 USDC (full purchase price)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:05:17.425784+00:00",
+    "type": "transaction",
+    "message": "Purchase payment confirmed | TX: f32af7c8-af59-5a... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:05:17.449113+00:00",
+    "type": "marketplace",
+    "message": "Listing e8e0b555 marked as SOLD",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:05:17.464789+00:00",
+    "type": "consumer",
+    "message": "Triggering revenue distribution up the chain...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:05:17.479992+00:00",
+    "type": "payment",
+    "message": "Verification -> Enrichment: $0.0144 USDC (80% revenue share)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:05:19.274230+00:00",
+    "type": "transaction",
+    "message": "Revenue share confirmed | TX: 675e6dc4-3b8d-59... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:05:19.279264+00:00",
+    "type": "payment",
+    "message": "Enrichment -> Sensor: $0.009 USDC (50% revenue share)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:05:20.945808+00:00",
+    "type": "transaction",
+    "message": "Revenue share confirmed | TX: 349247e8-2f3b-58... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:05:20.950440+00:00",
+    "type": "consumer",
+    "message": "Revenue distribution complete | Verification: $0.0036 | Enrichment: $0.0054 | Sensor: $0.009",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:05:24.400141+00:00",
+    "type": "balances",
+    "message": "Wallet balances updated after transaction",
+    "data": {
+      "sensor": 19.972465433605613,
+      "enrichment": 20.152256205877386,
+      "verification": 20.354133601596097,
+      "consumer": 19.267585946298865
+    }
+  },
+  {
+    "time": "2026-04-25T04:05:24.406799+00:00",
+    "type": "consumer",
+    "message": "Applying defensive action: Block internal IP ranges in outbound requests",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:05:24.421601+00:00",
+    "type": "consumer",
+    "message": "Pipeline complete | Total cost: $0.019999999999999997 USDC (including query fee)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:17:17.858067+00:00",
+    "type": "scanner",
+    "message": "[AUTO-SCAN #25] Scanning Email Security Feed...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:17:17.861783+00:00",
+    "type": "scanner",
+    "message": "[AUTO-SCAN #25] Scan complete. No actionable threats found in Email Security Feed.",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:17.895975+00:00",
+    "type": "scanner",
+    "message": "[AUTO-SCAN #26] Scanning Email Security Feed...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:17.903802+00:00",
+    "type": "scanner",
+    "message": "[AUTO-SCAN] Potential threat signal detected in Email Security Feed. Initiating pipeline...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:18.399417+00:00",
+    "type": "sensor",
+    "message": "Scanning threat feeds: OSINT, CVE Database, Dark Web Intel, Honeypots...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:18.416094+00:00",
+    "type": "sensor",
+    "message": "THREAT DETECTED via CVE Database: ZERO DAY VPN from North Korea",
+    "data": {
+      "type": "zero_day_vpn",
+      "source_ip": "45.142.15.123",
+      "port": 1194,
+      "severity": "critical",
+      "region": "North Korea",
+      "feed": "CVE Database",
+      "timestamp": "2026-04-25T04:19:18.416004+00:00",
+      "threat_id": "71550c5a",
+      "sale_price": 0.018,
+      "sensor_cut": 0.009,
+      "geo": {
+        "region": "North Korea",
+        "lat": 39.5,
+        "lng": 127.5
+      }
+    }
+  },
+  {
+    "time": "2026-04-25T04:19:18.431101+00:00",
+    "type": "sensor",
+    "message": "Pricing threat at $0.018 USDC based on CRITICAL severity",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:18.447380+00:00",
+    "type": "payment",
+    "message": "Sensor -> Enrichment: $0.003 USDC to process threat intel",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:20.893667+00:00",
+    "type": "transaction",
+    "message": "Payment confirmed | TX: 03d4448f-953f-52... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:20.900721+00:00",
+    "type": "sensor",
+    "message": "Threat intel packaged and handed to Enrichment Agent",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:21.408116+00:00",
+    "type": "enrichment",
+    "message": "Received threat from Sensor: ZERO DAY VPN",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:21.425142+00:00",
+    "type": "enrichment",
+    "message": "MITRE mapped: T1190 | Tactic: Initial Access | Actor: APT-Unknown",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:21.440838+00:00",
+    "type": "enrichment",
+    "message": "Recommended action: Take VPN offline pending emergency patch",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:21.457738+00:00",
+    "type": "enrichment",
+    "message": "Sale price: $0.018 USDC | My cut (30%): $0.0054 USDC",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:21.474232+00:00",
+    "type": "payment",
+    "message": "Enrichment -> Verification: $0.002 USDC to list intel for sale",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:23.409746+00:00",
+    "type": "transaction",
+    "message": "Payment confirmed | TX: 58aeb64f-1928-5d... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:23.416301+00:00",
+    "type": "enrichment",
+    "message": "Enriched intel handed to Verification Agent for listing",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:23.909467+00:00",
+    "type": "verification",
+    "message": "Received enriched intel: ZERO DAY VPN",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:23.914825+00:00",
+    "type": "verification",
+    "message": "Running 9 verification checks...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:23.933715+00:00",
+    "type": "verification",
+    "message": "Checks passed: 9/9 | Trust score: 1.0 | Fingerprint: 712eb53a06e87372",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:23.950431+00:00",
+    "type": "verification",
+    "message": "Intel PASSED verification. Creating marketplace listing...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:23.976039+00:00",
+    "type": "marketplace",
+    "message": "Intel listed for sale | ID: f3272995 | Price: $0.018 USDC | Severity: CRITICAL",
+    "data": {
+      "listing_id": "f3272995",
+      "threat_id": "71550c5a",
+      "threat_type": "zero_day_vpn",
+      "severity": "critical",
+      "sale_price": 0.018,
+      "mitre_id": "T1190",
+      "tactic": "Initial Access",
+      "actor": "APT-Unknown",
+      "trust_score": 1.0,
+      "fingerprint": "712eb53a06e87372",
+      "region": "North Korea",
+      "feed": "CVE Database",
+      "status": "available",
+      "listed_at": "2026-04-25T04:19:23.973060+00:00"
+    }
+  },
+  {
+    "time": "2026-04-25T04:19:23.994379+00:00",
+    "type": "verification",
+    "message": "Notifying Consumer Agent that intel is available for purchase...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:24.431374+00:00",
+    "type": "consumer",
+    "message": "Notification received: Intel available for purchase",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:24.447881+00:00",
+    "type": "consumer",
+    "message": "Reviewing listing: ZERO DAY VPN | Severity: CRITICAL | Price: $0.018 USDC | Trust: 1.0",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:24.463513+00:00",
+    "type": "consumer",
+    "message": "Purchase decision: APPROVED | Listing: f3272995 | Price: $0.018 USDC",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:24.479385+00:00",
+    "type": "payment",
+    "message": "Consumer -> Verification: $0.018 USDC (full purchase price)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:26.608556+00:00",
+    "type": "transaction",
+    "message": "Purchase payment confirmed | TX: 9642d3b8-1bb3-50... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:26.616443+00:00",
+    "type": "marketplace",
+    "message": "Listing f3272995 marked as SOLD",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:26.634063+00:00",
+    "type": "consumer",
+    "message": "Triggering revenue distribution up the chain...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:26.648194+00:00",
+    "type": "payment",
+    "message": "Verification -> Enrichment: $0.0144 USDC (80% revenue share)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:28.677444+00:00",
+    "type": "transaction",
+    "message": "Revenue share confirmed | TX: cc32007d-a3ee-5b... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:28.681890+00:00",
+    "type": "payment",
+    "message": "Enrichment -> Sensor: $0.009 USDC (50% revenue share)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:30.600406+00:00",
+    "type": "transaction",
+    "message": "Revenue share confirmed | TX: 8c0e2865-fe4e-5e... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:30.610315+00:00",
+    "type": "consumer",
+    "message": "Revenue distribution complete | Verification: $0.0036 | Enrichment: $0.0054 | Sensor: $0.009",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:34.482890+00:00",
+    "type": "balances",
+    "message": "Wallet balances updated after transaction",
+    "data": {
+      "sensor": 19.97791207474582,
+      "enrichment": 20.157753205877388,
+      "verification": 20.359282101596097,
+      "consumer": 19.249134446298864
+    }
+  },
+  {
+    "time": "2026-04-25T04:19:34.489153+00:00",
+    "type": "consumer",
+    "message": "Applying defensive action: Take VPN offline pending emergency patch",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:34.502369+00:00",
+    "type": "consumer",
+    "message": "Pipeline complete | Total cost: $0.018 USDC | Savings vs Ethereum: ~99%",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:19:34.560021+00:00",
+    "type": "scanner",
+    "message": "[AUTO-SCAN #26] Pipeline complete. Threats found so far: 11",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:29.966482+00:00",
+    "type": "sensor",
+    "message": "Scanning threat feeds: OSINT, CVE Database, Dark Web Intel, Honeypots...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:29.973070+00:00",
+    "type": "sensor",
+    "message": "THREAT DETECTED via DNS Monitor: DATA EXFIL DNS from North Korea",
+    "data": {
+      "type": "data_exfil_dns",
+      "source_ip": "203.0.86.100",
+      "port": 53,
+      "severity": "critical",
+      "region": "North Korea",
+      "feed": "DNS Monitor",
+      "timestamp": "2026-04-25T04:20:29.972712+00:00",
+      "threat_id": "b4f0bb6a",
+      "sale_price": 0.018,
+      "sensor_cut": 0.009,
+      "geo": {
+        "region": "North Korea",
+        "lat": 38.96,
+        "lng": 127.85
+      }
+    }
+  },
+  {
+    "time": "2026-04-25T04:20:29.988395+00:00",
+    "type": "sensor",
+    "message": "Pricing threat at $0.018 USDC based on CRITICAL severity",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:30.004777+00:00",
+    "type": "payment",
+    "message": "Sensor -> Enrichment: $0.003 USDC to process threat intel",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:31.960381+00:00",
+    "type": "transaction",
+    "message": "Payment confirmed | TX: bd09b252-f538-51... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:31.965835+00:00",
+    "type": "sensor",
+    "message": "Threat intel packaged and handed to Enrichment Agent",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:32.380638+00:00",
+    "type": "enrichment",
+    "message": "Received threat from Sensor: DATA EXFIL DNS",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:32.397247+00:00",
+    "type": "enrichment",
+    "message": "MITRE mapped: T1048.001 | Tactic: Exfiltration | Actor: APT-29",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:32.414783+00:00",
+    "type": "enrichment",
+    "message": "Recommended action: Deploy DNS monitoring and block suspicious queries",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:32.430298+00:00",
+    "type": "enrichment",
+    "message": "Sale price: $0.018 USDC | My cut (30%): $0.0054 USDC",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:32.453282+00:00",
+    "type": "payment",
+    "message": "Enrichment -> Verification: $0.002 USDC to list intel for sale",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:34.643178+00:00",
+    "type": "transaction",
+    "message": "Payment confirmed | TX: 435bdcc6-7a6e-5f... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:34.648953+00:00",
+    "type": "enrichment",
+    "message": "Enriched intel handed to Verification Agent for listing",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:35.053471+00:00",
+    "type": "verification",
+    "message": "Received enriched intel: DATA EXFIL DNS",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:35.061638+00:00",
+    "type": "verification",
+    "message": "Running 9 verification checks...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:35.081044+00:00",
+    "type": "verification",
+    "message": "Checks passed: 9/9 | Trust score: 1.0 | Fingerprint: 1512c2bdf67e9bb8",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:35.098268+00:00",
+    "type": "verification",
+    "message": "Intel PASSED verification. Creating marketplace listing...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:35.118652+00:00",
+    "type": "marketplace",
+    "message": "Intel listed for sale | ID: bcf7f7e6 | Price: $0.018 USDC | Severity: CRITICAL",
+    "data": {
+      "listing_id": "bcf7f7e6",
+      "threat_id": "b4f0bb6a",
+      "threat_type": "data_exfil_dns",
+      "severity": "critical",
+      "sale_price": 0.018,
+      "mitre_id": "T1048.001",
+      "tactic": "Exfiltration",
+      "actor": "APT-29",
+      "trust_score": 1.0,
+      "fingerprint": "1512c2bdf67e9bb8",
+      "region": "North Korea",
+      "feed": "DNS Monitor",
+      "status": "available",
+      "listed_at": "2026-04-25T04:20:35.115489+00:00"
+    }
+  },
+  {
+    "time": "2026-04-25T04:20:35.132616+00:00",
+    "type": "verification",
+    "message": "Notifying Consumer Agent that intel is available for purchase...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:35.519917+00:00",
+    "type": "consumer",
+    "message": "Notification received: Intel available for purchase",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:35.532696+00:00",
+    "type": "consumer",
+    "message": "Reviewing listing: DATA EXFIL DNS | Severity: CRITICAL | Price: $0.018 USDC | Trust: 1.0",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:35.549020+00:00",
+    "type": "consumer",
+    "message": "Purchase decision: APPROVED | Listing: bcf7f7e6 | Price: $0.018 USDC",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:35.563438+00:00",
+    "type": "payment",
+    "message": "Consumer -> Verification: $0.018 USDC (full purchase price)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:37.740796+00:00",
+    "type": "transaction",
+    "message": "Purchase payment confirmed | TX: 5a6ef7b0-da9e-56... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:37.752028+00:00",
+    "type": "marketplace",
+    "message": "Listing bcf7f7e6 marked as SOLD",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:37.770477+00:00",
+    "type": "consumer",
+    "message": "Triggering revenue distribution up the chain...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:37.784114+00:00",
+    "type": "payment",
+    "message": "Verification -> Enrichment: $0.0144 USDC (80% revenue share)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:39.806813+00:00",
+    "type": "transaction",
+    "message": "Revenue share confirmed | TX: 4a2a1456-ebbf-5b... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:39.811018+00:00",
+    "type": "payment",
+    "message": "Enrichment -> Sensor: $0.009 USDC (50% revenue share)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:41.727862+00:00",
+    "type": "transaction",
+    "message": "Revenue share confirmed | TX: f47a6bb4-3300-5d... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:41.732207+00:00",
+    "type": "consumer",
+    "message": "Revenue distribution complete | Verification: $0.0036 | Enrichment: $0.0054 | Sensor: $0.009",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:45.703765+00:00",
+    "type": "balances",
+    "message": "Wallet balances updated after transaction",
+    "data": {
+      "sensor": 19.98346057474582,
+      "enrichment": 20.163250205877386,
+      "verification": 20.364430601596098,
+      "consumer": 19.230682946298863
+    }
+  },
+  {
+    "time": "2026-04-25T04:20:45.710704+00:00",
+    "type": "consumer",
+    "message": "Applying defensive action: Deploy DNS monitoring and block suspicious queries",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:20:45.726791+00:00",
+    "type": "consumer",
+    "message": "Pipeline complete | Total cost: $0.018 USDC | Savings vs Ethereum: ~99%",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:05.445275+00:00",
+    "type": "sensor",
+    "message": "Scanning threat feeds: OSINT, CVE Database, Dark Web Intel, Honeypots...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:05.449857+00:00",
+    "type": "sensor",
+    "message": "THREAT DETECTED via Dark Web Intel: DNS ENUMERATION from China",
+    "data": {
+      "type": "dns_enumeration",
+      "source_ip": "91.108.68.157",
+      "port": 53,
+      "severity": "medium",
+      "region": "China",
+      "feed": "Dark Web Intel",
+      "timestamp": "2026-04-25T04:21:05.449577+00:00",
+      "threat_id": "b021d343",
+      "sale_price": 0.008,
+      "sensor_cut": 0.004,
+      "geo": {
+        "region": "China",
+        "lat": 41.34,
+        "lng": 118.53
+      }
+    }
+  },
+  {
+    "time": "2026-04-25T04:21:05.465502+00:00",
+    "type": "sensor",
+    "message": "Pricing threat at $0.008 USDC based on MEDIUM severity",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:05.481550+00:00",
+    "type": "payment",
+    "message": "Sensor -> Enrichment: $0.003 USDC to process threat intel",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:07.689496+00:00",
+    "type": "transaction",
+    "message": "Payment confirmed | TX: 9fdac14d-2b7e-58... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:07.694750+00:00",
+    "type": "sensor",
+    "message": "Threat intel packaged and handed to Enrichment Agent",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:08.103503+00:00",
+    "type": "enrichment",
+    "message": "Received threat from Sensor: DNS ENUMERATION",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:08.110494+00:00",
+    "type": "enrichment",
+    "message": "MITRE mapped: T1590.002 | Tactic: Reconnaissance | Actor: APT-41",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:08.127308+00:00",
+    "type": "enrichment",
+    "message": "Recommended action: Restrict DNS zone transfers",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:08.145000+00:00",
+    "type": "enrichment",
+    "message": "Sale price: $0.008 USDC | My cut (30%): $0.0024 USDC",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:08.160482+00:00",
+    "type": "payment",
+    "message": "Enrichment -> Verification: $0.002 USDC to list intel for sale",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:10.025486+00:00",
+    "type": "transaction",
+    "message": "Payment confirmed | TX: 5913ec48-3c97-5d... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:10.030829+00:00",
+    "type": "enrichment",
+    "message": "Enriched intel handed to Verification Agent for listing",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:10.412494+00:00",
+    "type": "verification",
+    "message": "Received enriched intel: DNS ENUMERATION",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:10.429698+00:00",
+    "type": "verification",
+    "message": "Running 9 verification checks...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:10.444436+00:00",
+    "type": "verification",
+    "message": "Checks passed: 9/9 | Trust score: 1.0 | Fingerprint: d1cfadf087568fcb",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:10.459559+00:00",
+    "type": "verification",
+    "message": "Intel PASSED verification. Creating marketplace listing...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:10.476925+00:00",
+    "type": "marketplace",
+    "message": "Intel listed for sale | ID: 6ff2743a | Price: $0.008 USDC | Severity: MEDIUM",
+    "data": {
+      "listing_id": "6ff2743a",
+      "threat_id": "b021d343",
+      "threat_type": "dns_enumeration",
+      "severity": "medium",
+      "sale_price": 0.008,
+      "mitre_id": "T1590.002",
+      "tactic": "Reconnaissance",
+      "actor": "APT-41",
+      "trust_score": 1.0,
+      "fingerprint": "d1cfadf087568fcb",
+      "region": "China",
+      "feed": "Dark Web Intel",
+      "status": "available",
+      "listed_at": "2026-04-25T04:21:10.474293+00:00"
+    }
+  },
+  {
+    "time": "2026-04-25T04:21:10.491441+00:00",
+    "type": "verification",
+    "message": "Notifying Consumer Agent that intel is available for purchase...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:10.878713+00:00",
+    "type": "consumer",
+    "message": "Notification received: Intel available for purchase",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:10.894166+00:00",
+    "type": "consumer",
+    "message": "Reviewing listing: DNS ENUMERATION | Severity: MEDIUM | Price: $0.008 USDC | Trust: 1.0",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:10.910994+00:00",
+    "type": "consumer",
+    "message": "Purchase decision: APPROVED | Listing: 6ff2743a | Price: $0.008 USDC",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:10.930822+00:00",
+    "type": "payment",
+    "message": "Consumer -> Verification: $0.008 USDC (full purchase price)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:12.830817+00:00",
+    "type": "transaction",
+    "message": "Purchase payment confirmed | TX: 7a7a228f-8add-5b... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:12.840785+00:00",
+    "type": "marketplace",
+    "message": "Listing 6ff2743a marked as SOLD",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:12.857618+00:00",
+    "type": "consumer",
+    "message": "Triggering revenue distribution up the chain...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:12.870407+00:00",
+    "type": "payment",
+    "message": "Verification -> Enrichment: $0.0064 USDC (80% revenue share)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:14.702488+00:00",
+    "type": "transaction",
+    "message": "Revenue share confirmed | TX: 2a0b4b8e-cd42-5d... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:14.707929+00:00",
+    "type": "payment",
+    "message": "Enrichment -> Sensor: $0.004 USDC (50% revenue share)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:16.573503+00:00",
+    "type": "transaction",
+    "message": "Revenue share confirmed | TX: 6597e74f-563d-58... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:16.578809+00:00",
+    "type": "consumer",
+    "message": "Revenue distribution complete | Verification: $0.0016 | Enrichment: $0.0024 | Sensor: $0.004",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:20.308494+00:00",
+    "type": "balances",
+    "message": "Wallet balances updated after transaction",
+    "data": {
+      "sensor": 19.98900907474582,
+      "enrichment": 20.156295705877387,
+      "verification": 20.3675791015961,
+      "consumer": 19.222231446298863
+    }
+  },
+  {
+    "time": "2026-04-25T04:21:20.313432+00:00",
+    "type": "consumer",
+    "message": "Applying defensive action: Restrict DNS zone transfers",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:20.329704+00:00",
+    "type": "consumer",
+    "message": "Pipeline complete | Total cost: $0.008 USDC | Savings vs Ethereum: ~99%",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:26.147709+00:00",
+    "type": "consumer",
+    "message": "Initiating PULL request. Paying query fee of $0.002 USDC to Verification...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:26.152785+00:00",
+    "type": "payment",
+    "message": "Consumer -> Verification: $0.002 USDC (query fee)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:28.204583+00:00",
+    "type": "transaction",
+    "message": "Query fee confirmed | TX: e2121613-38f0-54... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:28.582284+00:00",
+    "type": "verification",
+    "message": "Pull request received from Consumer Agent. Forwarding to Enrichment...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:28.587417+00:00",
+    "type": "payment",
+    "message": "Verification -> Enrichment: $0.001 USDC to relay request",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:30.496323+00:00",
+    "type": "transaction",
+    "message": "Payment confirmed | TX: a75ad455-3f9b-5b... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:30.846617+00:00",
+    "type": "enrichment",
+    "message": "Pull request received from Verification. Relaying to Sensor Agent...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:30.861473+00:00",
+    "type": "payment",
+    "message": "Enrichment -> Sensor: $0.001 USDC to check threat pool",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:32.942158+00:00",
+    "type": "transaction",
+    "message": "Payment confirmed | TX: 9439824b-4a3e-55... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:33.286085+00:00",
+    "type": "sensor",
+    "message": "Pull request received from Enrichment Agent. Checking threat pool...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:33.304675+00:00",
+    "type": "sensor",
+    "message": "Threat found in pool via CVE Database: SPRING4SHELL PROBE [CRITICAL]",
+    "data": {
+      "type": "spring4shell_probe",
+      "source_ip": "194.165.42.5",
+      "port": 8080,
+      "severity": "critical",
+      "region": "China",
+      "feed": "CVE Database",
+      "cve": "CVE-2022-22965",
+      "timestamp": "2026-04-25T04:21:33.304576+00:00",
+      "threat_id": "b262303f",
+      "sale_price": 0.018,
+      "sensor_cut": 0.009,
+      "geo": {
+        "region": "China",
+        "lat": 37.35,
+        "lng": 115.61
+      }
+    }
+  },
+  {
+    "time": "2026-04-25T04:21:33.316918+00:00",
+    "type": "payment",
+    "message": "Sensor -> Enrichment: $0.003 USDC to process threat intel",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:35.330944+00:00",
+    "type": "transaction",
+    "message": "Payment confirmed | TX: 41bc3890-f1b1-5b... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:35.338154+00:00",
+    "type": "sensor",
+    "message": "Threat intel packaged and handed to Enrichment Agent",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:35.397099+00:00",
+    "type": "enrichment",
+    "message": "Sensor found a threat. Enriching with MITRE ATT&CK context...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:35.412394+00:00",
+    "type": "enrichment",
+    "message": "MITRE mapped: T1190 | Tactic: Initial Access | Actor: APT-Unknown",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:35.430850+00:00",
+    "type": "enrichment",
+    "message": "Sale price: $0.018 USDC | My cut (30%): $0.0054 USDC",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:35.446985+00:00",
+    "type": "payment",
+    "message": "Enrichment -> Verification: $0.002 USDC to list intel for sale",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:37.528926+00:00",
+    "type": "transaction",
+    "message": "Payment confirmed | TX: cd95d574-4dfa-53... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:37.533932+00:00",
+    "type": "enrichment",
+    "message": "Enriched intel handed to Verification Agent for listing",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:37.591756+00:00",
+    "type": "verification",
+    "message": "Threat received from Enrichment. Running verification checks...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:37.605965+00:00",
+    "type": "verification",
+    "message": "Checks passed: 9/9 | Trust score: 1.0",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:37.626700+00:00",
+    "type": "marketplace",
+    "message": "Intel listed | ID: 5d3ad527 | Price: $0.018 USDC",
+    "data": {
+      "listing_id": "5d3ad527",
+      "threat_id": "b262303f",
+      "threat_type": "spring4shell_probe",
+      "severity": "critical",
+      "sale_price": 0.018,
+      "mitre_id": "T1190",
+      "tactic": "Initial Access",
+      "actor": "APT-Unknown",
+      "trust_score": 1.0,
+      "fingerprint": "95f16d035d30c405",
+      "region": "China",
+      "feed": "CVE Database",
+      "status": "available",
+      "listed_at": "2026-04-25T04:21:37.622457+00:00"
+    }
+  },
+  {
+    "time": "2026-04-25T04:21:37.639944+00:00",
+    "type": "verification",
+    "message": "Notifying Consumer Agent that intel is ready for purchase...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:37.696320+00:00",
+    "type": "consumer",
+    "message": "Response received: Intel available | SPRING4SHELL PROBE | $0.018 USDC",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:37.710262+00:00",
+    "type": "consumer",
+    "message": "Purchase decision: APPROVED | Listing: 5d3ad527 | Price: $0.018 USDC",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:37.724434+00:00",
+    "type": "payment",
+    "message": "Consumer -> Verification: $0.018 USDC (full purchase price)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:39.616400+00:00",
+    "type": "transaction",
+    "message": "Purchase payment confirmed | TX: 53e90519-cd28-51... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:39.624492+00:00",
+    "type": "marketplace",
+    "message": "Listing 5d3ad527 marked as SOLD",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:39.638320+00:00",
+    "type": "consumer",
+    "message": "Triggering revenue distribution up the chain...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:39.651137+00:00",
+    "type": "payment",
+    "message": "Verification -> Enrichment: $0.0144 USDC (80% revenue share)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:41.731969+00:00",
+    "type": "transaction",
+    "message": "Revenue share confirmed | TX: 88273eb5-c4f3-52... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:41.737189+00:00",
+    "type": "payment",
+    "message": "Enrichment -> Sensor: $0.009 USDC (50% revenue share)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:43.711350+00:00",
+    "type": "transaction",
+    "message": "Revenue share confirmed | TX: 14459f1b-5184-5b... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:43.715388+00:00",
+    "type": "consumer",
+    "message": "Revenue distribution complete | Verification: $0.0036 | Enrichment: $0.0054 | Sensor: $0.009",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:47.418571+00:00",
+    "type": "balances",
+    "message": "Wallet balances updated after transaction",
+    "data": {
+      "sensor": 19.990557574745818,
+      "enrichment": 20.161341205877385,
+      "verification": 20.373276101596097,
+      "consumer": 19.201328446298863
+    }
+  },
+  {
+    "time": "2026-04-25T04:21:47.424394+00:00",
+    "type": "consumer",
+    "message": "Applying defensive action: Patch Spring Framework - CVE-2022-22965",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:47.440988+00:00",
+    "type": "consumer",
+    "message": "Pipeline complete | Total cost: $0.019999999999999997 USDC (including query fee)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:54.595675+00:00",
+    "type": "scanner",
+    "message": "[AUTO-SCAN #27] Scanning Email Security Feed...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:54.599966+00:00",
+    "type": "scanner",
+    "message": "[AUTO-SCAN] Potential threat signal detected in Email Security Feed. Initiating pipeline...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:54.999224+00:00",
+    "type": "sensor",
+    "message": "Scanning threat feeds: OSINT, CVE Database, Dark Web Intel, Honeypots...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:55.007239+00:00",
+    "type": "sensor",
+    "message": "THREAT DETECTED via WAF Alert: SQL INJECTION from China",
+    "data": {
+      "type": "sql_injection",
+      "source_ip": "172.16.222.48",
+      "port": 80,
+      "severity": "critical",
+      "region": "China",
+      "feed": "WAF Alert",
+      "timestamp": "2026-04-25T04:21:55.007147+00:00",
+      "threat_id": "6d9b0104",
+      "sale_price": 0.018,
+      "sensor_cut": 0.009,
+      "geo": {
+        "region": "China",
+        "lat": 39.5,
+        "lng": 116.36
+      }
+    }
+  },
+  {
+    "time": "2026-04-25T04:21:55.023710+00:00",
+    "type": "sensor",
+    "message": "Pricing threat at $0.018 USDC based on CRITICAL severity",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:55.041630+00:00",
+    "type": "payment",
+    "message": "Sensor -> Enrichment: $0.003 USDC to process threat intel",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:57.243134+00:00",
+    "type": "transaction",
+    "message": "Payment confirmed | TX: 058765c8-9a83-54... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:57.247867+00:00",
+    "type": "sensor",
+    "message": "Threat intel packaged and handed to Enrichment Agent",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:57.673078+00:00",
+    "type": "enrichment",
+    "message": "Received threat from Sensor: SQL INJECTION",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:57.688588+00:00",
+    "type": "enrichment",
+    "message": "MITRE mapped: T1190 | Tactic: Initial Access | Actor: FIN7",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:57.706203+00:00",
+    "type": "enrichment",
+    "message": "Recommended action: Deploy WAF rule and patch immediately",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:57.725256+00:00",
+    "type": "enrichment",
+    "message": "Sale price: $0.018 USDC | My cut (30%): $0.0054 USDC",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:57.743757+00:00",
+    "type": "payment",
+    "message": "Enrichment -> Verification: $0.002 USDC to list intel for sale",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:59.732441+00:00",
+    "type": "transaction",
+    "message": "Payment confirmed | TX: e0f2f4f6-c96b-56... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:21:59.740511+00:00",
+    "type": "enrichment",
+    "message": "Enriched intel handed to Verification Agent for listing",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:00.130045+00:00",
+    "type": "verification",
+    "message": "Received enriched intel: SQL INJECTION",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:00.145919+00:00",
+    "type": "verification",
+    "message": "Running 9 verification checks...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:00.160809+00:00",
+    "type": "verification",
+    "message": "Checks passed: 9/9 | Trust score: 1.0 | Fingerprint: d779776f53eee96d",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:00.178220+00:00",
+    "type": "verification",
+    "message": "Intel PASSED verification. Creating marketplace listing...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:00.196256+00:00",
+    "type": "marketplace",
+    "message": "Intel listed for sale | ID: ba853002 | Price: $0.018 USDC | Severity: CRITICAL",
+    "data": {
+      "listing_id": "ba853002",
+      "threat_id": "6d9b0104",
+      "threat_type": "sql_injection",
+      "severity": "critical",
+      "sale_price": 0.018,
+      "mitre_id": "T1190",
+      "tactic": "Initial Access",
+      "actor": "FIN7",
+      "trust_score": 1.0,
+      "fingerprint": "d779776f53eee96d",
+      "region": "China",
+      "feed": "WAF Alert",
+      "status": "available",
+      "listed_at": "2026-04-25T04:22:00.193625+00:00"
+    }
+  },
+  {
+    "time": "2026-04-25T04:22:00.211288+00:00",
+    "type": "verification",
+    "message": "Notifying Consumer Agent that intel is available for purchase...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:00.586718+00:00",
+    "type": "consumer",
+    "message": "Notification received: Intel available for purchase",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:00.599833+00:00",
+    "type": "consumer",
+    "message": "Reviewing listing: SQL INJECTION | Severity: CRITICAL | Price: $0.018 USDC | Trust: 1.0",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:00.614429+00:00",
+    "type": "consumer",
+    "message": "Purchase decision: APPROVED | Listing: ba853002 | Price: $0.018 USDC",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:00.628647+00:00",
+    "type": "payment",
+    "message": "Consumer -> Verification: $0.018 USDC (full purchase price)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:02.752390+00:00",
+    "type": "transaction",
+    "message": "Purchase payment confirmed | TX: b40de850-5cd1-5b... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:02.762300+00:00",
+    "type": "marketplace",
+    "message": "Listing ba853002 marked as SOLD",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:02.777090+00:00",
+    "type": "consumer",
+    "message": "Triggering revenue distribution up the chain...",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:02.790907+00:00",
+    "type": "payment",
+    "message": "Verification -> Enrichment: $0.0144 USDC (80% revenue share)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:04.612283+00:00",
+    "type": "transaction",
+    "message": "Revenue share confirmed | TX: dbb4f1e1-a975-5c... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:04.616058+00:00",
+    "type": "payment",
+    "message": "Enrichment -> Sensor: $0.009 USDC (50% revenue share)",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:06.430393+00:00",
+    "type": "transaction",
+    "message": "Revenue share confirmed | TX: f155ef99-ad4d-56... | State: INITIATED",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:06.434404+00:00",
+    "type": "consumer",
+    "message": "Revenue distribution complete | Verification: $0.0036 | Enrichment: $0.0054 | Sensor: $0.009",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:09.923622+00:00",
+    "type": "balances",
+    "message": "Wallet balances updated after transaction",
+    "data": {
+      "sensor": 19.996106074745818,
+      "enrichment": 20.176289705877387,
+      "verification": 20.378424601596098,
+      "consumer": 19.182876946298865
+    }
+  },
+  {
+    "time": "2026-04-25T04:22:09.927681+00:00",
+    "type": "consumer",
+    "message": "Applying defensive action: Deploy WAF rule and patch immediately",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:09.941374+00:00",
+    "type": "consumer",
+    "message": "Pipeline complete | Total cost: $0.018 USDC | Savings vs Ethereum: ~99%",
+    "data": {}
+  },
+  {
+    "time": "2026-04-25T04:22:09.992506+00:00",
+    "type": "scanner",
+    "message": "[AUTO-SCAN #27] Pipeline complete. Threats found so far: 12",
+    "data": {}
+  }
+]

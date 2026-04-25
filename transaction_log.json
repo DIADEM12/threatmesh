@@ -1,0 +1,2695 @@
+[
+  {
+    "pipeline_run": 1,
+    "threat_id": "69cdb4b0",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.175.166",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": "\ud83d\udd12 Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-09T13:43:27.181933+00:00"
+  },
+  {
+    "pipeline_run": 2,
+    "threat_id": "3e6f7e34",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.177.106",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Account lockout triggered + MFA enforcement enabled",
+    "completed_at": "2026-04-20T12:47:16.943654+00:00"
+  },
+  {
+    "pipeline_run": 3,
+    "threat_id": "eed91be7",
+    "threat_type": "malware_beacon",
+    "source_ip": "198.51.48.194",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Host isolated from network + IR ticket created",
+    "completed_at": "2026-04-20T13:00:00.259287+00:00"
+  },
+  {
+    "pipeline_run": 4,
+    "threat_id": "2e468c89",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.249.238",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Account lockout triggered + MFA enforcement enabled",
+    "completed_at": "2026-04-20T13:01:30.491855+00:00"
+  },
+  {
+    "pipeline_run": 5,
+    "threat_id": "8c17762d",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.177.104",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-20T13:01:39.999577+00:00"
+  },
+  {
+    "pipeline_run": 6,
+    "threat_id": "70af8ab0",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.193.181",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Account lockout triggered + MFA enforcement enabled",
+    "completed_at": "2026-04-20T13:01:49.710581+00:00"
+  },
+  {
+    "pipeline_run": 7,
+    "threat_id": "8691205a",
+    "threat_type": "sql_injection",
+    "source_ip": "172.16.137.22",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " WAF rule deployed: SQL pattern blocked at edge",
+    "completed_at": "2026-04-20T13:01:59.534945+00:00"
+  },
+  {
+    "pipeline_run": 8,
+    "threat_id": "3376b326",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.189.33",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Account lockout triggered + MFA enforcement enabled",
+    "completed_at": "2026-04-20T13:02:09.133854+00:00"
+  },
+  {
+    "pipeline_run": 9,
+    "threat_id": "fe3f1540",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.181.249",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Account lockout triggered + MFA enforcement enabled",
+    "completed_at": "2026-04-20T13:02:18.577688+00:00"
+  },
+  {
+    "pipeline_run": 10,
+    "threat_id": "5a6a5a4e",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.118.70",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-20T13:02:27.876677+00:00"
+  },
+  {
+    "pipeline_run": 11,
+    "threat_id": "0df4f513",
+    "threat_type": "sql_injection",
+    "source_ip": "172.16.228.101",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " WAF rule deployed: SQL pattern blocked at edge",
+    "completed_at": "2026-04-20T13:02:37.082858+00:00"
+  },
+  {
+    "pipeline_run": 12,
+    "threat_id": "3e6a8456",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.161.136",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-20T13:02:46.541336+00:00"
+  },
+  {
+    "pipeline_run": 13,
+    "threat_id": "dd2ff7ae",
+    "threat_type": "sql_injection",
+    "source_ip": "172.16.78.193",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " WAF rule deployed: SQL pattern blocked at edge",
+    "completed_at": "2026-04-20T13:02:55.764556+00:00"
+  },
+  {
+    "pipeline_run": 14,
+    "threat_id": "a82bccbf",
+    "threat_type": "sql_injection",
+    "source_ip": "172.16.181.67",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " WAF rule deployed: SQL pattern blocked at edge",
+    "completed_at": "2026-04-20T13:03:05.140279+00:00"
+  },
+  {
+    "pipeline_run": 15,
+    "threat_id": "57f211b5",
+    "threat_type": "ddos_attempt",
+    "source_ip": "203.0.229.112",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Rate limiting activated: upstream null-routing enabled",
+    "completed_at": "2026-04-20T13:03:14.814074+00:00"
+  },
+  {
+    "pipeline_run": 16,
+    "threat_id": "cc52f2c1",
+    "threat_type": "malware_beacon",
+    "source_ip": "198.51.215.26",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Host isolated from network + IR ticket created",
+    "completed_at": "2026-04-20T13:03:25.605678+00:00"
+  },
+  {
+    "pipeline_run": 17,
+    "threat_id": "8e699bd8",
+    "threat_type": "sql_injection",
+    "source_ip": "172.16.26.14",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " WAF rule deployed: SQL pattern blocked at edge",
+    "completed_at": "2026-04-20T13:03:35.407152+00:00"
+  },
+  {
+    "pipeline_run": 18,
+    "threat_id": "9d98fb4f",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.86.149",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Account lockout triggered + MFA enforcement enabled",
+    "completed_at": "2026-04-20T13:03:44.897994+00:00"
+  },
+  {
+    "pipeline_run": 19,
+    "threat_id": "17d286d1",
+    "threat_type": "sql_injection",
+    "source_ip": "172.16.109.67",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " WAF rule deployed: SQL pattern blocked at edge",
+    "completed_at": "2026-04-20T13:03:54.580168+00:00"
+  },
+  {
+    "pipeline_run": 20,
+    "threat_id": "4351618e",
+    "threat_type": "ddos_attempt",
+    "source_ip": "203.0.50.49",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Rate limiting activated: upstream null-routing enabled",
+    "completed_at": "2026-04-20T13:04:04.057288+00:00"
+  },
+  {
+    "pipeline_run": 21,
+    "threat_id": "284c89bd",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.188.17",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-20T13:04:13.807727+00:00"
+  },
+  {
+    "pipeline_run": 22,
+    "threat_id": "22d9a466",
+    "threat_type": "malware_beacon",
+    "source_ip": "198.51.137.155",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Host isolated from network + IR ticket created",
+    "completed_at": "2026-04-20T13:04:23.765491+00:00"
+  },
+  {
+    "pipeline_run": 23,
+    "threat_id": "b6ebdbd3",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.237.80",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-20T13:04:33.558941+00:00"
+  },
+  {
+    "pipeline_run": 24,
+    "threat_id": "f7c2d361",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.185.251",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Account lockout triggered + MFA enforcement enabled",
+    "completed_at": "2026-04-20T13:04:45.484450+00:00"
+  },
+  {
+    "pipeline_run": 25,
+    "threat_id": "7e505740",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.150.233",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-20T13:04:54.953721+00:00"
+  },
+  {
+    "pipeline_run": 26,
+    "threat_id": "920f62d5",
+    "threat_type": "sql_injection",
+    "source_ip": "172.16.62.113",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " WAF rule deployed: SQL pattern blocked at edge",
+    "completed_at": "2026-04-20T13:05:06.407976+00:00"
+  },
+  {
+    "pipeline_run": 27,
+    "threat_id": "43244437",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.142.12",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Account lockout triggered + MFA enforcement enabled",
+    "completed_at": "2026-04-20T13:05:17.163630+00:00"
+  },
+  {
+    "pipeline_run": 28,
+    "threat_id": "18e20707",
+    "threat_type": "ddos_attempt",
+    "source_ip": "203.0.217.50",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Rate limiting activated: upstream null-routing enabled",
+    "completed_at": "2026-04-20T13:05:27.608978+00:00"
+  },
+  {
+    "pipeline_run": 29,
+    "threat_id": "9319f48c",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.75.140",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-20T13:05:37.598822+00:00"
+  },
+  {
+    "pipeline_run": 30,
+    "threat_id": "1fd1143c",
+    "threat_type": "sql_injection",
+    "source_ip": "172.16.137.55",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " WAF rule deployed: SQL pattern blocked at edge",
+    "completed_at": "2026-04-20T13:05:48.024797+00:00"
+  },
+  {
+    "pipeline_run": 31,
+    "threat_id": "1de6b158",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.127.225",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-20T13:05:59.422440+00:00"
+  },
+  {
+    "pipeline_run": 32,
+    "threat_id": "70d75b88",
+    "threat_type": "malware_beacon",
+    "source_ip": "198.51.201.3",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Host isolated from network + IR ticket created",
+    "completed_at": "2026-04-20T13:06:08.878832+00:00"
+  },
+  {
+    "pipeline_run": 33,
+    "threat_id": "d6cf529c",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.251.185",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-20T13:06:18.402554+00:00"
+  },
+  {
+    "pipeline_run": 34,
+    "threat_id": "f3a1d4df",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.229.83",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-20T13:06:27.909105+00:00"
+  },
+  {
+    "pipeline_run": 35,
+    "threat_id": "5b0153df",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.206.197",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-20T13:06:37.585619+00:00"
+  },
+  {
+    "pipeline_run": 36,
+    "threat_id": "fa38d1ca",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.135.228",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Account lockout triggered + MFA enforcement enabled",
+    "completed_at": "2026-04-20T13:06:46.993251+00:00"
+  },
+  {
+    "pipeline_run": 37,
+    "threat_id": "87b880fe",
+    "threat_type": "ddos_attempt",
+    "source_ip": "203.0.74.9",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Rate limiting activated: upstream null-routing enabled",
+    "completed_at": "2026-04-20T13:06:56.709553+00:00"
+  },
+  {
+    "pipeline_run": 38,
+    "threat_id": "29918720",
+    "threat_type": "ddos_attempt",
+    "source_ip": "203.0.52.136",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Rate limiting activated: upstream null-routing enabled",
+    "completed_at": "2026-04-20T13:07:06.347622+00:00"
+  },
+  {
+    "pipeline_run": 39,
+    "threat_id": "7125de76",
+    "threat_type": "sql_injection",
+    "source_ip": "172.16.124.154",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " WAF rule deployed: SQL pattern blocked at edge",
+    "completed_at": "2026-04-20T13:07:15.737736+00:00"
+  },
+  {
+    "pipeline_run": 40,
+    "threat_id": "b7504a1b",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.218.169",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-20T13:07:25.397776+00:00"
+  },
+  {
+    "pipeline_run": 41,
+    "threat_id": "3c689068",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.142.161",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-20T13:07:34.837429+00:00"
+  },
+  {
+    "pipeline_run": 42,
+    "threat_id": "3236094c",
+    "threat_type": "malware_beacon",
+    "source_ip": "198.51.201.213",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Host isolated from network + IR ticket created",
+    "completed_at": "2026-04-20T13:07:44.291505+00:00"
+  },
+  {
+    "pipeline_run": 43,
+    "threat_id": "47904bb3",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.30.183",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-20T13:07:53.695990+00:00"
+  },
+  {
+    "pipeline_run": 44,
+    "threat_id": "6c2955a0",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.215.170",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-20T13:08:05.196461+00:00"
+  },
+  {
+    "pipeline_run": 45,
+    "threat_id": "58b4f715",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.18.129",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-20T13:08:15.238452+00:00"
+  },
+  {
+    "pipeline_run": 46,
+    "threat_id": "003c469f",
+    "threat_type": "ddos_attempt",
+    "source_ip": "203.0.230.120",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Rate limiting activated: upstream null-routing enabled",
+    "completed_at": "2026-04-20T13:08:24.347850+00:00"
+  },
+  {
+    "pipeline_run": 47,
+    "threat_id": "5d3fc008",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.82.116",
+    "severity": "medium",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Firewall rule added: BLOCK 192.168.x.x on port 22",
+    "completed_at": "2026-04-20T13:08:33.666704+00:00"
+  },
+  {
+    "pipeline_run": 48,
+    "threat_id": "ab7bd946",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.82.171",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Account lockout triggered + MFA enforcement enabled",
+    "completed_at": "2026-04-20T13:08:43.884615+00:00"
+  },
+  {
+    "pipeline_run": 49,
+    "threat_id": "26e5ae11",
+    "threat_type": "malware_beacon",
+    "source_ip": "198.51.201.6",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Host isolated from network + IR ticket created",
+    "completed_at": "2026-04-20T13:08:56.390961+00:00"
+  },
+  {
+    "pipeline_run": 50,
+    "threat_id": "8abbbf9f",
+    "threat_type": "sql_injection",
+    "source_ip": "172.16.123.93",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " WAF rule deployed: SQL pattern blocked at edge",
+    "completed_at": "2026-04-20T13:09:08.219442+00:00"
+  },
+  {
+    "pipeline_run": 51,
+    "threat_id": "4f1350aa",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.45.148",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Account lockout triggered + MFA enforcement enabled",
+    "completed_at": "2026-04-20T13:09:17.472989+00:00"
+  },
+  {
+    "pipeline_run": 52,
+    "threat_id": "31d960af",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.219.103",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Account lockout triggered + MFA enforcement enabled",
+    "completed_at": "2026-04-20T13:09:26.686916+00:00"
+  },
+  {
+    "pipeline_run": 53,
+    "threat_id": "b3722251",
+    "threat_type": "malware_beacon",
+    "source_ip": "198.51.8.38",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Host isolated from network + IR ticket created",
+    "completed_at": "2026-04-20T13:09:35.984194+00:00"
+  },
+  {
+    "pipeline_run": 54,
+    "threat_id": "ddf8502c",
+    "threat_type": "sql_injection",
+    "source_ip": "172.16.172.42",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " WAF rule deployed: SQL pattern blocked at edge",
+    "completed_at": "2026-04-20T13:09:45.874452+00:00"
+  },
+  {
+    "pipeline_run": 55,
+    "threat_id": "99ae52b1",
+    "threat_type": "ddos_attempt",
+    "source_ip": "203.0.220.240",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Rate limiting activated: upstream null-routing enabled",
+    "completed_at": "2026-04-20T13:09:55.480867+00:00"
+  },
+  {
+    "pipeline_run": 56,
+    "threat_id": "9b571406",
+    "threat_type": "ddos_attempt",
+    "source_ip": "203.0.201.137",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Rate limiting activated: upstream null-routing enabled",
+    "completed_at": "2026-04-20T13:10:05.101843+00:00"
+  },
+  {
+    "pipeline_run": 57,
+    "threat_id": "4fd4480c",
+    "threat_type": "malware_beacon",
+    "source_ip": "198.51.12.129",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Host isolated from network + IR ticket created",
+    "completed_at": "2026-04-20T13:10:14.669076+00:00"
+  },
+  {
+    "pipeline_run": 58,
+    "threat_id": "88194b1d",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.64.152",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Account lockout triggered + MFA enforcement enabled",
+    "completed_at": "2026-04-20T13:10:23.996010+00:00"
+  },
+  {
+    "pipeline_run": 59,
+    "threat_id": "35ebd686",
+    "threat_type": "malware_beacon",
+    "source_ip": "198.51.79.249",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Host isolated from network + IR ticket created",
+    "completed_at": "2026-04-20T13:10:33.353749+00:00"
+  },
+  {
+    "pipeline_run": 60,
+    "threat_id": "69d9751e",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.131.240",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Account lockout triggered + MFA enforcement enabled",
+    "completed_at": "2026-04-20T13:10:42.625076+00:00"
+  },
+  {
+    "pipeline_run": 61,
+    "threat_id": "b45f648c",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.243.238",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Account lockout triggered + MFA enforcement enabled",
+    "completed_at": "2026-04-20T13:10:51.991415+00:00"
+  },
+  {
+    "pipeline_run": 62,
+    "threat_id": "74847511",
+    "threat_type": "ddos_attempt",
+    "source_ip": "203.0.11.176",
+    "severity": "high",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Rate limiting activated: upstream null-routing enabled",
+    "completed_at": "2026-04-20T13:11:01.409817+00:00"
+  },
+  {
+    "pipeline_run": 63,
+    "threat_id": "72159f6b",
+    "threat_type": "malware_beacon",
+    "source_ip": "198.51.204.127",
+    "severity": "critical",
+    "transactions": {
+      "sensor_to_enrichment": "$0.003 USDC",
+      "enrichment_to_verification": "$0.004 USDC",
+      "verification_to_consumer": "$0.002 USDC",
+      "total_pipeline_cost": "$0.009 USDC"
+    },
+    "action_taken": " Host isolated from network + IR ticket created",
+    "completed_at": "2026-04-20T13:11:11.528892+00:00"
+  },
+  {
+    "pipeline_run": 64,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "ransomware_c2",
+    "source_ip": "91.108.41.246",
+    "severity": "critical",
+    "mitre_id": "T1071.001",
+    "actor": "LockBit",
+    "trust_score": 1.0,
+    "fingerprint": "880e4951a8d55e93",
+    "sale_price": 0.018,
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Emergency network isolation and activate incident response plan",
+    "completed_at": "2026-04-22T19:47:44.362194+00:00"
+  },
+  {
+    "pipeline_run": 65,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "sql_injection",
+    "source_ip": "172.16.59.190",
+    "severity": "critical",
+    "mitre_id": "T1190",
+    "actor": "FIN7",
+    "trust_score": 1.0,
+    "fingerprint": "a8f1124bd19a0fce",
+    "sale_price": 0.018,
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Deploy WAF rule and patch vulnerable endpoint immediately",
+    "completed_at": "2026-04-22T19:48:00.904471+00:00"
+  },
+  {
+    "pipeline_run": 66,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "ddos_attempt",
+    "source_ip": "203.0.193.80",
+    "severity": "high",
+    "mitre_id": "T1498",
+    "actor": "Killnet",
+    "trust_score": 1.0,
+    "fingerprint": "293073410713c3ec",
+    "sale_price": 0.012,
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Activate rate limiting and enable upstream null-routing",
+    "completed_at": "2026-04-22T19:48:18.580914+00:00"
+  },
+  {
+    "pipeline_run": 67,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "data_exfil",
+    "source_ip": "45.33.203.247",
+    "severity": "high",
+    "mitre_id": "T1048",
+    "actor": "APT-41",
+    "trust_score": 1.0,
+    "fingerprint": "f1d8a29f0058ee58",
+    "sale_price": 0.012,
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Block outbound FTP and audit data access logs immediately",
+    "completed_at": "2026-04-22T19:48:34.551057+00:00"
+  },
+  {
+    "pipeline_run": 68,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "malware_beacon",
+    "source_ip": "198.51.182.7",
+    "severity": "critical",
+    "mitre_id": "T1071",
+    "actor": "Lazarus Group",
+    "trust_score": 1.0,
+    "fingerprint": "2225af4ab6a4c850",
+    "sale_price": 0.018,
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Isolate affected host immediately and begin forensic analysis",
+    "completed_at": "2026-04-22T19:48:55.630090+00:00"
+  },
+  {
+    "pipeline_run": 69,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "data_exfil",
+    "source_ip": "45.33.99.209",
+    "severity": "high",
+    "mitre_id": "T1048",
+    "actor": "APT-41",
+    "trust_score": 1.0,
+    "fingerprint": "b0a5afbf4dcdbd64",
+    "sale_price": 0.012,
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Block outbound FTP and audit data access logs immediately",
+    "completed_at": "2026-04-22T19:49:13.119444+00:00"
+  },
+  {
+    "pipeline_run": 70,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.50.127",
+    "severity": "high",
+    "mitre_id": "T1110",
+    "actor": "APT-29",
+    "trust_score": 1.0,
+    "fingerprint": "1ddec847a7cca24a",
+    "sale_price": 0.012,
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Enable MFA immediately and enforce account lockout policy",
+    "completed_at": "2026-04-22T19:49:34.311130+00:00"
+  },
+  {
+    "pipeline_run": 71,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "phishing_kit",
+    "source_ip": "185.220.246.187",
+    "severity": "medium",
+    "mitre_id": "T1566",
+    "actor": "TA453",
+    "trust_score": 1.0,
+    "fingerprint": "13cbd04ea3017ed4",
+    "sale_price": 0.008,
+    "revenue_share": {
+      "verification": 0.0016,
+      "enrichment": 0.0024,
+      "sensor": 0.004
+    },
+    "defensive_action": "Block sender domain and run phishing awareness training",
+    "completed_at": "2026-04-22T19:49:52.261850+00:00"
+  },
+  {
+    "pipeline_run": 72,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "phishing_kit",
+    "source_ip": "185.220.184.165",
+    "severity": "medium",
+    "mitre_id": "T1566",
+    "actor": "TA453",
+    "trust_score": 1.0,
+    "fingerprint": "abc477d1b1dabdcf",
+    "sale_price": 0.008,
+    "revenue_share": {
+      "verification": 0.0016,
+      "enrichment": 0.0024,
+      "sensor": 0.004
+    },
+    "defensive_action": "Block sender domain and run phishing awareness training",
+    "completed_at": "2026-04-22T19:50:09.769648+00:00"
+  },
+  {
+    "pipeline_run": 73,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.98.241",
+    "severity": "medium",
+    "mitre_id": "T1046",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "fingerprint": "bbca3af1f2a09506",
+    "sale_price": 0.008,
+    "revenue_share": {
+      "verification": 0.0016,
+      "enrichment": 0.0024,
+      "sensor": 0.004
+    },
+    "defensive_action": "Block source IP and increase logging on port 22",
+    "completed_at": "2026-04-22T19:50:36.591929+00:00"
+  },
+  {
+    "pipeline_run": 74,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.47.176",
+    "severity": "high",
+    "mitre_id": "T1110",
+    "actor": "APT-29",
+    "trust_score": 1.0,
+    "fingerprint": "9b3a0402edf9c2fe",
+    "sale_price": 0.012,
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Enable MFA immediately and enforce account lockout policy",
+    "completed_at": "2026-04-22T19:50:56.227636+00:00"
+  },
+  {
+    "pipeline_run": 75,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "data_exfil",
+    "source_ip": "45.33.16.48",
+    "severity": "high",
+    "mitre_id": "T1048",
+    "actor": "APT-41",
+    "trust_score": 1.0,
+    "fingerprint": "46ae095c8d097271",
+    "sale_price": 0.012,
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Block outbound FTP and audit data access logs immediately",
+    "completed_at": "2026-04-22T19:51:15.116019+00:00"
+  },
+  {
+    "pipeline_run": 76,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "phishing_kit",
+    "source_ip": "185.220.210.3",
+    "severity": "medium",
+    "mitre_id": "T1566",
+    "actor": "TA453",
+    "trust_score": 1.0,
+    "fingerprint": "81931aa17252463c",
+    "sale_price": 0.008,
+    "revenue_share": {
+      "verification": 0.0016,
+      "enrichment": 0.0024,
+      "sensor": 0.004
+    },
+    "defensive_action": "Block sender domain and run phishing awareness training",
+    "completed_at": "2026-04-22T19:51:34.640764+00:00"
+  },
+  {
+    "pipeline_run": 77,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "phishing_kit",
+    "source_ip": "185.220.237.92",
+    "severity": "medium",
+    "mitre_id": "T1566",
+    "actor": "TA453",
+    "trust_score": 1.0,
+    "fingerprint": "d4c6661b2495ac05",
+    "sale_price": 0.008,
+    "revenue_share": {
+      "verification": 0.0016,
+      "enrichment": 0.0024,
+      "sensor": 0.004
+    },
+    "defensive_action": "Block sender domain and run phishing awareness training",
+    "completed_at": "2026-04-22T19:51:50.803492+00:00"
+  },
+  {
+    "pipeline_run": 78,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.176.165",
+    "severity": "medium",
+    "mitre_id": "T1046",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "fingerprint": "c452e142a3feb721",
+    "sale_price": 0.008,
+    "revenue_share": {
+      "verification": 0.0016,
+      "enrichment": 0.0024,
+      "sensor": 0.004
+    },
+    "defensive_action": "Block source IP and increase logging on port 22",
+    "completed_at": "2026-04-22T19:52:07.017971+00:00"
+  },
+  {
+    "pipeline_run": 79,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "brute_force",
+    "source_ip": "10.0.197.217",
+    "severity": "high",
+    "mitre_id": "T1110",
+    "actor": "APT-29",
+    "trust_score": 1.0,
+    "fingerprint": "250415ca37b4cba6",
+    "sale_price": 0.012,
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Enable MFA immediately and enforce account lockout policy",
+    "completed_at": "2026-04-22T19:52:23.042682+00:00"
+  },
+  {
+    "pipeline_run": 80,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.19.237",
+    "severity": "medium",
+    "mitre_id": "T1046",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "fingerprint": "c6a2df7ca55b2187",
+    "sale_price": 0.008,
+    "revenue_share": {
+      "verification": 0.0016,
+      "enrichment": 0.0024,
+      "sensor": 0.004
+    },
+    "defensive_action": "Block source IP and increase logging on port 22",
+    "completed_at": "2026-04-22T19:52:40.133854+00:00"
+  },
+  {
+    "pipeline_run": 81,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.94.83",
+    "severity": "medium",
+    "mitre_id": "T1046",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "fingerprint": "a4c4c1b070dc6a39",
+    "sale_price": 0.008,
+    "revenue_share": {
+      "verification": 0.0016,
+      "enrichment": 0.0024,
+      "sensor": 0.004
+    },
+    "defensive_action": "Block source IP and increase logging on port 22",
+    "completed_at": "2026-04-22T19:52:55.452460+00:00"
+  },
+  {
+    "pipeline_run": 82,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "malware_beacon",
+    "source_ip": "198.51.73.232",
+    "severity": "critical",
+    "mitre_id": "T1071",
+    "actor": "Lazarus Group",
+    "trust_score": 1.0,
+    "fingerprint": "ab302a07cdb30536",
+    "sale_price": 0.018,
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Isolate affected host immediately and begin forensic analysis",
+    "completed_at": "2026-04-22T19:53:11.140972+00:00"
+  },
+  {
+    "pipeline_run": 83,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.104.112",
+    "severity": "medium",
+    "mitre_id": "T1046",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "fingerprint": "192771a7dc5cc904",
+    "sale_price": 0.008,
+    "revenue_share": {
+      "verification": 0.0016,
+      "enrichment": 0.0024,
+      "sensor": 0.004
+    },
+    "defensive_action": "Block source IP and increase logging on port 22",
+    "completed_at": "2026-04-22T19:53:28.536160+00:00"
+  },
+  {
+    "pipeline_run": 84,
+    "mode": "pull",
+    "action": "purchased",
+    "threat_type": "port_scan",
+    "source_ip": "192.168.236.150",
+    "severity": "medium",
+    "mitre_id": "T1046",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "sale_price": 0.008,
+    "query_fee_paid": 0.002,
+    "revenue_share": {
+      "verification": 0.0016,
+      "enrichment": 0.0024,
+      "sensor": 0.004
+    },
+    "defensive_action": "Block source IP and increase logging on port 22",
+    "completed_at": "2026-04-22T19:53:49.765741+00:00"
+  },
+  {
+    "pipeline_run": 85,
+    "mode": "pull",
+    "action": "purchased",
+    "threat_type": "ddos_attempt",
+    "source_ip": "203.0.173.51",
+    "severity": "high",
+    "mitre_id": "T1498",
+    "actor": "Killnet",
+    "trust_score": 1.0,
+    "sale_price": 0.012,
+    "query_fee_paid": 0.002,
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Activate rate limiting and enable upstream null-routing",
+    "completed_at": "2026-04-22T19:54:09.809324+00:00"
+  },
+  {
+    "pipeline_run": 86,
+    "mode": "pull",
+    "action": "no_update",
+    "query_fee_paid": 0.002,
+    "completed_at": "2026-04-22T19:54:18.797932+00:00"
+  },
+  {
+    "pipeline_run": 87,
+    "mode": "pull",
+    "action": "purchased",
+    "threat_type": "sql_injection",
+    "source_ip": "172.16.84.167",
+    "severity": "critical",
+    "mitre_id": "T1190",
+    "actor": "FIN7",
+    "trust_score": 1.0,
+    "sale_price": 0.018,
+    "query_fee_paid": 0.002,
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Deploy WAF rule and patch vulnerable endpoint immediately",
+    "completed_at": "2026-04-22T19:54:37.460771+00:00"
+  },
+  {
+    "pipeline_run": 88,
+    "mode": "pull",
+    "action": "no_update",
+    "query_fee_paid": 0.002,
+    "completed_at": "2026-04-22T19:54:46.997146+00:00"
+  },
+  {
+    "pipeline_run": 89,
+    "mode": "pull",
+    "action": "no_update",
+    "query_fee_paid": 0.002,
+    "completed_at": "2026-04-22T19:54:57.866763+00:00"
+  },
+  {
+    "pipeline_run": 90,
+    "mode": "pull",
+    "action": "no_update",
+    "query_fee_paid": 0.002,
+    "completed_at": "2026-04-22T19:55:07.319564+00:00"
+  },
+  {
+    "pipeline_run": 91,
+    "mode": "pull",
+    "action": "purchased",
+    "threat_type": "sql_injection",
+    "source_ip": "172.16.143.218",
+    "severity": "critical",
+    "mitre_id": "T1190",
+    "actor": "FIN7",
+    "trust_score": 1.0,
+    "sale_price": 0.018,
+    "query_fee_paid": 0.002,
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Deploy WAF rule and patch vulnerable endpoint immediately",
+    "completed_at": "2026-04-22T19:55:25.592758+00:00"
+  },
+  {
+    "pipeline_run": 92,
+    "mode": "pull",
+    "action": "purchased",
+    "threat_type": "ddos_attempt",
+    "source_ip": "203.0.65.40",
+    "severity": "high",
+    "mitre_id": "T1498",
+    "actor": "Killnet",
+    "trust_score": 1.0,
+    "sale_price": 0.012,
+    "query_fee_paid": 0.002,
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Activate rate limiting and enable upstream null-routing",
+    "completed_at": "2026-04-22T19:55:44.798365+00:00"
+  },
+  {
+    "pipeline_run": 93,
+    "mode": "pull",
+    "action": "purchased",
+    "threat_type": "data_exfil",
+    "source_ip": "45.33.243.195",
+    "severity": "high",
+    "mitre_id": "T1048",
+    "actor": "APT-41",
+    "trust_score": 1.0,
+    "sale_price": 0.012,
+    "query_fee_paid": 0.002,
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Block outbound FTP and audit data access logs immediately",
+    "completed_at": "2026-04-22T19:56:03.092462+00:00"
+  },
+  {
+    "pipeline_run": 94,
+    "mode": "pull",
+    "action": "no_update",
+    "query_fee_paid": 0.002,
+    "completed_at": "2026-04-22T22:51:45.766681+00:00"
+  },
+  {
+    "pipeline_run": 95,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "data_exfil",
+    "source_ip": "45.33.219.157",
+    "severity": "high",
+    "mitre_id": "T1048",
+    "actor": "APT-41",
+    "trust_score": 1.0,
+    "fingerprint": "da9a979bb628c25e",
+    "sale_price": 0.012,
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Block outbound FTP and audit data access logs immediately",
+    "completed_at": "2026-04-22T22:52:28.977858+00:00"
+  },
+  {
+    "pipeline_run": 96,
+    "mode": "pull",
+    "action": "purchased",
+    "threat_type": "path_traversal",
+    "source_ip": "89.248.169.81",
+    "severity": "high",
+    "mitre_id": "T1190",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "sale_price": 0.012,
+    "query_fee_paid": 0.002,
+    "feed": "WAF Alert",
+    "geo": {
+      "region": "Eastern Europe",
+      "lat": 51.49,
+      "lng": 28.72
+    },
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Implement strict path validation",
+    "balances": {
+      "sensor": 19.853478892681885,
+      "enrichment": 20.007357628216916,
+      "verification": 20.212938642282612,
+      "consumer": 19.751695116121383
+    },
+    "completed_at": "2026-04-23T21:31:29.115383+00:00"
+  },
+  {
+    "pipeline_run": 97,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "zero_day_kernel",
+    "source_ip": "94.102.123.248",
+    "severity": "critical",
+    "mitre_id": "T1068",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "fingerprint": "f52a9e68b170ea3a",
+    "sale_price": 0.018,
+    "feed": "Dark Web Intel",
+    "geo": {
+      "region": "China",
+      "lat": 38.79,
+      "lng": 114.0
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Emergency patching and system isolation",
+    "balances": {
+      "sensor": 19.856027392681884,
+      "enrichment": 20.012854628216918,
+      "verification": 20.21808714228261,
+      "consumer": 19.73324361612138
+    },
+    "completed_at": "2026-04-23T21:32:12.666515+00:00"
+  },
+  {
+    "pipeline_run": 98,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "mitm_attack",
+    "source_ip": "172.16.79.221",
+    "severity": "critical",
+    "mitre_id": "T1557",
+    "actor": "APT-29",
+    "trust_score": 1.0,
+    "fingerprint": "59d7dfa52fa0d7f8",
+    "sale_price": 0.018,
+    "feed": "Network Monitor",
+    "geo": {
+      "region": "Internal",
+      "lat": 49.98,
+      "lng": 0.12
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Enforce certificate pinning and mutual TLS",
+    "balances": {
+      "sensor": 19.861575892681884,
+      "enrichment": 20.027803128216917,
+      "verification": 20.22323564228261,
+      "consumer": 19.714792116121384
+    },
+    "completed_at": "2026-04-23T22:00:40.835331+00:00"
+  },
+  {
+    "pipeline_run": 99,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "zero_day_vpn",
+    "source_ip": "45.142.44.235",
+    "severity": "critical",
+    "mitre_id": "T1190",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "fingerprint": "770f4c70e3131821",
+    "sale_price": 0.018,
+    "feed": "CVE Database",
+    "geo": {
+      "region": "North Korea",
+      "lat": 41.62,
+      "lng": 126.29
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Take VPN offline pending emergency patch",
+    "balances": {
+      "sensor": 19.867124392681884,
+      "enrichment": 20.023823407067542,
+      "verification": 20.22835682222942,
+      "consumer": 19.696317495614924
+    },
+    "completed_at": "2026-04-23T22:01:06.915434+00:00"
+  },
+  {
+    "pipeline_run": 100,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "log4shell_probe",
+    "source_ip": "45.142.194.186",
+    "severity": "critical",
+    "mitre_id": "T1190",
+    "actor": "APT-41",
+    "trust_score": 1.0,
+    "fingerprint": "2dc47c777a8b2fb8",
+    "sale_price": 0.018,
+    "feed": "CVE Database",
+    "geo": {
+      "region": "Russia",
+      "lat": 57.27,
+      "lng": 35.38
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Patch Log4j immediately - CVE-2021-44228 is critical",
+    "balances": {
+      "sensor": 19.872672892681884,
+      "enrichment": 20.029320407067544,
+      "verification": 20.233505322229416,
+      "consumer": 19.677865995614926
+    },
+    "completed_at": "2026-04-23T22:01:33.163567+00:00"
+  },
+  {
+    "pipeline_run": 101,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "container_escape",
+    "source_ip": "10.0.73.180",
+    "severity": "critical",
+    "mitre_id": "T1611",
+    "actor": "TeamTNT",
+    "trust_score": 1.0,
+    "fingerprint": "3c094658591dcd59",
+    "sale_price": 0.018,
+    "feed": "Container Monitor",
+    "geo": {
+      "region": "Internal",
+      "lat": 49.79,
+      "lng": -1.67
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Patch container runtime and restrict capabilities",
+    "balances": {
+      "sensor": 19.874769892681883,
+      "enrichment": 20.037817407067543,
+      "verification": 20.238653822229416,
+      "consumer": 19.659414495614925
+    },
+    "completed_at": "2026-04-24T07:17:21.689201+00:00"
+  },
+  {
+    "pipeline_run": 102,
+    "mode": "pull",
+    "action": "no_update",
+    "query_fee_paid": 0.002,
+    "completed_at": "2026-04-24T07:17:50.700274+00:00"
+  },
+  {
+    "pipeline_run": 103,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "credential_stuffing",
+    "source_ip": "198.51.142.176",
+    "severity": "high",
+    "mitre_id": "T1110.004",
+    "actor": "FIN7",
+    "trust_score": 1.0,
+    "fingerprint": "a0605ae2a7c1e43a",
+    "sale_price": 0.012,
+    "feed": "Dark Web Intel",
+    "geo": {
+      "region": "China",
+      "lat": 42.56,
+      "lng": 116.09
+    },
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Implement rate limiting and CAPTCHA",
+    "balances": {
+      "sensor": 19.877866892681883,
+      "enrichment": 20.044062907067545,
+      "verification": 20.243150822229417,
+      "consumer": 19.644511495614925
+    },
+    "completed_at": "2026-04-24T08:13:36.336756+00:00"
+  },
+  {
+    "pipeline_run": 104,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "privilege_escalation",
+    "source_ip": "172.16.11.102",
+    "severity": "critical",
+    "mitre_id": "T1068",
+    "actor": "Insider",
+    "trust_score": 1.0,
+    "fingerprint": "d841f9c12b11375a",
+    "sale_price": 0.018,
+    "feed": "EDR Alert",
+    "geo": {
+      "region": "Internal",
+      "lat": 53.62,
+      "lng": -0.17
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Patch vulnerability and review access controls",
+    "balances": {
+      "sensor": 19.880415392681883,
+      "enrichment": 20.04952839425353,
+      "verification": 20.248299322229418,
+      "consumer": 19.626059995614924
+    },
+    "completed_at": "2026-04-24T20:09:37.248353+00:00"
+  },
+  {
+    "pipeline_run": 105,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "zero_day_vpn",
+    "source_ip": "45.142.76.140",
+    "severity": "critical",
+    "mitre_id": "T1190",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "fingerprint": "617fbc8e113b6ee7",
+    "sale_price": 0.018,
+    "feed": "CVE Database",
+    "geo": {
+      "region": "North Korea",
+      "lat": 37.91,
+      "lng": 123.98
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Take VPN offline pending emergency patch",
+    "balances": {
+      "sensor": 19.885963892681882,
+      "enrichment": 20.055025394253533,
+      "verification": 20.25344782222942,
+      "consumer": 19.607608495614926
+    },
+    "completed_at": "2026-04-24T20:13:01.916368+00:00"
+  },
+  {
+    "pipeline_run": 106,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "password_spray",
+    "source_ip": "5.188.45.51",
+    "severity": "medium",
+    "mitre_id": "T1110.003",
+    "actor": "APT-33",
+    "trust_score": 1.0,
+    "fingerprint": "9849c12dc9ef0e22",
+    "sale_price": 0.008,
+    "feed": "SIEM Correlation",
+    "geo": {
+      "region": "Eastern Europe",
+      "lat": 51.92,
+      "lng": 30.07
+    },
+    "revenue_share": {
+      "verification": 0.0016,
+      "enrichment": 0.0024,
+      "sensor": 0.004
+    },
+    "defensive_action": "Enable smart lockout and monitor failed logins",
+    "balances": {
+      "sensor": 19.891512392681886,
+      "enrichment": 20.05752239425353,
+      "verification": 20.256596322229417,
+      "consumer": 19.599156995614926
+    },
+    "completed_at": "2026-04-24T20:18:56.878142+00:00"
+  },
+  {
+    "pipeline_run": 107,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "policy_violation",
+    "source_ip": "192.168.59.221",
+    "severity": "medium",
+    "mitre_id": "T1078",
+    "actor": "Insider",
+    "trust_score": 1.0,
+    "fingerprint": "ecd6a70ffb305059",
+    "sale_price": 0.008,
+    "feed": "SIEM Correlation",
+    "geo": {
+      "region": "Internal",
+      "lat": 50.71,
+      "lng": -0.42
+    },
+    "revenue_share": {
+      "verification": 0.0016,
+      "enrichment": 0.0024,
+      "sensor": 0.004
+    },
+    "defensive_action": "Review user activity and enforce policies",
+    "balances": {
+      "sensor": 19.892060892681883,
+      "enrichment": 20.060019394253533,
+      "verification": 20.25974482222942,
+      "consumer": 19.590705495614927
+    },
+    "completed_at": "2026-04-24T20:26:52.497936+00:00"
+  },
+  {
+    "pipeline_run": 108,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "data_exfil_ftp",
+    "source_ip": "45.33.219.192",
+    "severity": "high",
+    "mitre_id": "T1048",
+    "actor": "APT-41",
+    "trust_score": 1.0,
+    "fingerprint": "ae53db5f61db1d4e",
+    "sale_price": 0.012,
+    "feed": "DLP Alert",
+    "geo": {
+      "region": "China",
+      "lat": 37.83,
+      "lng": 113.53
+    },
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Block outbound FTP and audit data access logs",
+    "balances": {
+      "sensor": 19.898609392681884,
+      "enrichment": 20.063702014040295,
+      "verification": 20.263693322229418,
+      "consumer": 19.578253995614926
+    },
+    "completed_at": "2026-04-24T20:28:14.540934+00:00"
+  },
+  {
+    "pipeline_run": 109,
+    "mode": "pull",
+    "action": "purchased",
+    "threat_type": "arp_spoofing",
+    "source_ip": "10.0.181.191",
+    "severity": "medium",
+    "mitre_id": "T1557.002",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "sale_price": 0.008,
+    "query_fee_paid": 0.002,
+    "feed": "Network Monitor",
+    "geo": {
+      "region": "Internal",
+      "lat": 53.64,
+      "lng": 2.32
+    },
+    "revenue_share": {
+      "verification": 0.0016,
+      "enrichment": 0.0024,
+      "sensor": 0.004
+    },
+    "defensive_action": "Enable dynamic ARP inspection on switches",
+    "balances": {
+      "sensor": 19.90011653818715,
+      "enrichment": 20.065634697398497,
+      "verification": 20.267390322229417,
+      "consumer": 19.567350995614927
+    },
+    "completed_at": "2026-04-24T20:30:15.449414+00:00"
+  },
+  {
+    "pipeline_run": 110,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "zero_day_vpn",
+    "source_ip": "45.142.68.23",
+    "severity": "critical",
+    "mitre_id": "T1190",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "fingerprint": "cd066e451416e492",
+    "sale_price": 0.018,
+    "feed": "CVE Database",
+    "geo": {
+      "region": "North Korea",
+      "lat": 37.0,
+      "lng": 124.9
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Take VPN offline pending emergency patch",
+    "balances": {
+      "sensor": 19.89666503818715,
+      "enrichment": 20.071069421137143,
+      "verification": 20.272524101596098,
+      "consumer": 19.548876380237655
+    },
+    "completed_at": "2026-04-24T20:37:50.858058+00:00"
+  },
+  {
+    "pipeline_run": 111,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "after_hours_access",
+    "source_ip": "10.10.170.248",
+    "severity": "medium",
+    "mitre_id": "T1078",
+    "actor": "Insider",
+    "trust_score": 1.0,
+    "fingerprint": "3eca3abdc4af7a8b",
+    "sale_price": 0.008,
+    "feed": "SIEM Correlation",
+    "geo": {
+      "region": "Internal",
+      "lat": 53.77,
+      "lng": 1.35
+    },
+    "revenue_share": {
+      "verification": 0.0016,
+      "enrichment": 0.0024,
+      "sensor": 0.004
+    },
+    "defensive_action": "Investigate unusual access pattern",
+    "balances": {
+      "sensor": 19.902189433605614,
+      "enrichment": 20.07356642113714,
+      "verification": 20.2756726015961,
+      "consumer": 19.540424880237655
+    },
+    "completed_at": "2026-04-24T20:38:42.162905+00:00"
+  },
+  {
+    "pipeline_run": 112,
+    "mode": "pull",
+    "action": "no_update",
+    "query_fee_paid": 0.002,
+    "completed_at": "2026-04-24T20:41:13.013711+00:00"
+  },
+  {
+    "pipeline_run": 113,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "syn_flood",
+    "source_ip": "45.142.5.199",
+    "severity": "high",
+    "mitre_id": "T1498",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "fingerprint": "bc7cae8ad72e240c",
+    "sale_price": 0.012,
+    "feed": "Firewall Alert",
+    "geo": {
+      "region": "Eastern Europe",
+      "lat": 50.4,
+      "lng": 32.58
+    },
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Enable SYN cookies on all public-facing servers",
+    "balances": {
+      "sensor": 19.903737933605615,
+      "enrichment": 20.076811921137143,
+      "verification": 20.280169601596096,
+      "consumer": 19.525521880237655
+    },
+    "completed_at": "2026-04-24T20:42:05.978923+00:00"
+  },
+  {
+    "pipeline_run": 114,
+    "mode": "pull",
+    "action": "purchased",
+    "threat_type": "data_exfil_dns",
+    "source_ip": "203.0.193.43",
+    "severity": "critical",
+    "mitre_id": "T1048.001",
+    "actor": "APT-29",
+    "trust_score": 1.0,
+    "sale_price": 0.018,
+    "query_fee_paid": 0.002,
+    "feed": "DNS Monitor",
+    "geo": {
+      "region": "North Korea",
+      "lat": 40.71,
+      "lng": 122.9
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Deploy DNS monitoring and block suspicious queries",
+    "balances": {
+      "sensor": 19.907286433605613,
+      "enrichment": 20.09130892113714,
+      "verification": 20.285866601596098,
+      "consumer": 19.504618880237654
+    },
+    "completed_at": "2026-04-25T03:12:41.518716+00:00"
+  },
+  {
+    "pipeline_run": 115,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "container_escape",
+    "source_ip": "10.0.18.211",
+    "severity": "critical",
+    "mitre_id": "T1611",
+    "actor": "TeamTNT",
+    "trust_score": 1.0,
+    "fingerprint": "fe9ca9376770e719",
+    "sale_price": 0.018,
+    "feed": "Container Monitor",
+    "geo": {
+      "region": "Internal",
+      "lat": 53.37,
+      "lng": -0.3
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Patch container runtime and restrict capabilities",
+    "balances": {
+      "sensor": 19.912834933605613,
+      "enrichment": 20.09680592113714,
+      "verification": 20.2910151015961,
+      "consumer": 19.486167380237653
+    },
+    "completed_at": "2026-04-25T03:17:12.950229+00:00"
+  },
+  {
+    "pipeline_run": 116,
+    "mode": "pull",
+    "action": "purchased",
+    "threat_type": "subdomain_harvest",
+    "source_ip": "185.220.48.3",
+    "severity": "low",
+    "mitre_id": "T1596",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "sale_price": 0.005,
+    "query_fee_paid": 0.002,
+    "feed": "OSINT Feed",
+    "geo": {
+      "region": "Iran",
+      "lat": 36.66,
+      "lng": 51.47
+    },
+    "revenue_share": {
+      "verification": 0.001,
+      "enrichment": 0.0015,
+      "sensor": 0.0025
+    },
+    "defensive_action": "Monitor certificate transparency logs",
+    "balances": {
+      "sensor": 19.919383433605613,
+      "enrichment": 20.09145142113714,
+      "verification": 20.2941121015961,
+      "consumer": 19.478264380237654
+    },
+    "completed_at": "2026-04-25T03:24:47.634675+00:00"
+  },
+  {
+    "pipeline_run": 117,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "mitm_attack",
+    "source_ip": "172.16.149.9",
+    "severity": "critical",
+    "mitre_id": "T1557",
+    "actor": "APT-29",
+    "trust_score": 1.0,
+    "fingerprint": "759f3372135581e2",
+    "sale_price": 0.018,
+    "feed": "Network Monitor",
+    "geo": {
+      "region": "Internal",
+      "lat": 50.42,
+      "lng": -0.63
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Enforce certificate pinning and mutual TLS",
+    "balances": {
+      "sensor": 19.918431933605614,
+      "enrichment": 20.09399692113714,
+      "verification": 20.2992606015961,
+      "consumer": 19.459812880237653
+    },
+    "completed_at": "2026-04-25T03:25:19.677697+00:00"
+  },
+  {
+    "pipeline_run": 118,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "spear_phishing",
+    "source_ip": "194.165.185.124",
+    "severity": "high",
+    "mitre_id": "T1566.001",
+    "actor": "APT-33",
+    "trust_score": 1.0,
+    "fingerprint": "32809317f2409862",
+    "sale_price": 0.012,
+    "feed": "Email Security",
+    "geo": {
+      "region": "Iran",
+      "lat": 32.81,
+      "lng": 48.99
+    },
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Block sender and alert targeted employees",
+    "balances": {
+      "sensor": 19.923980433605614,
+      "enrichment": 20.104046705877387,
+      "verification": 20.3032091015961,
+      "consumer": 19.447261446298864
+    },
+    "completed_at": "2026-04-25T03:30:03.257570+00:00"
+  },
+  {
+    "pipeline_run": 119,
+    "mode": "pull",
+    "action": "purchased",
+    "threat_type": "arp_spoofing",
+    "source_ip": "10.0.178.6",
+    "severity": "medium",
+    "mitre_id": "T1557.002",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "sale_price": 0.008,
+    "query_fee_paid": 0.002,
+    "feed": "Network Monitor",
+    "geo": {
+      "region": "Internal",
+      "lat": 50.43,
+      "lng": 1.32
+    },
+    "revenue_share": {
+      "verification": 0.0016,
+      "enrichment": 0.0024,
+      "sensor": 0.004
+    },
+    "defensive_action": "Enable dynamic ARP inspection on switches",
+    "balances": {
+      "sensor": 19.927528933605615,
+      "enrichment": 20.104092205877386,
+      "verification": 20.3069061015961,
+      "consumer": 19.436358446298865
+    },
+    "completed_at": "2026-04-25T03:36:51.212686+00:00"
+  },
+  {
+    "pipeline_run": 120,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "data_exfil_https",
+    "source_ip": "185.220.14.121",
+    "severity": "critical",
+    "mitre_id": "T1048.002",
+    "actor": "Lazarus",
+    "trust_score": 1.0,
+    "fingerprint": "62c02c79160b60cc",
+    "sale_price": 0.018,
+    "feed": "DLP Alert",
+    "geo": {
+      "region": "Russia",
+      "lat": 54.06,
+      "lng": 37.24
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Inspect TLS traffic and block suspicious endpoints",
+    "balances": {
+      "sensor": 19.928077433605615,
+      "enrichment": 20.105137705877386,
+      "verification": 20.3120546015961,
+      "consumer": 19.417906946298864
+    },
+    "completed_at": "2026-04-25T03:37:22.623876+00:00"
+  },
+  {
+    "pipeline_run": 121,
+    "mode": "pull",
+    "action": "no_update",
+    "query_fee_paid": 0.002,
+    "completed_at": "2026-04-25T03:42:41.225738+00:00"
+  },
+  {
+    "pipeline_run": 122,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "sql_injection",
+    "source_ip": "172.16.101.94",
+    "severity": "critical",
+    "mitre_id": "T1190",
+    "actor": "FIN7",
+    "trust_score": 1.0,
+    "fingerprint": "f069773dc34c0d47",
+    "sale_price": 0.018,
+    "feed": "WAF Alert",
+    "geo": {
+      "region": "China",
+      "lat": 38.65,
+      "lng": 119.23
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Deploy WAF rule and patch immediately",
+    "balances": {
+      "sensor": 19.934625933605613,
+      "enrichment": 20.110183205877387,
+      "verification": 20.317751601596097,
+      "consumer": 19.397003946298863
+    },
+    "completed_at": "2026-04-25T03:43:33.468241+00:00"
+  },
+  {
+    "pipeline_run": 123,
+    "mode": "pull",
+    "action": "purchased",
+    "threat_type": "syn_flood",
+    "source_ip": "45.142.78.201",
+    "severity": "high",
+    "mitre_id": "T1498",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "sale_price": 0.012,
+    "query_fee_paid": 0.002,
+    "feed": "Firewall Alert",
+    "geo": {
+      "region": "Eastern Europe",
+      "lat": 51.69,
+      "lng": 30.53
+    },
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Enable SYN cookies on all public-facing servers",
+    "balances": {
+      "sensor": 19.941174433605614,
+      "enrichment": 20.113428705877386,
+      "verification": 20.322248601596097,
+      "consumer": 19.382100946298863
+    },
+    "completed_at": "2026-04-25T03:50:06.222669+00:00"
+  },
+  {
+    "pipeline_run": 124,
+    "mode": "pull",
+    "action": "purchased",
+    "threat_type": "credential_stuffing",
+    "source_ip": "198.51.232.149",
+    "severity": "high",
+    "mitre_id": "T1110.004",
+    "actor": "FIN7",
+    "trust_score": 1.0,
+    "sale_price": 0.012,
+    "query_fee_paid": 0.002,
+    "feed": "Dark Web Intel",
+    "geo": {
+      "region": "China",
+      "lat": 40.89,
+      "lng": 116.56
+    },
+    "revenue_share": {
+      "verification": 0.0024,
+      "enrichment": 0.0036,
+      "sensor": 0.006
+    },
+    "defensive_action": "Implement rate limiting and CAPTCHA",
+    "balances": {
+      "sensor": 19.944722933605615,
+      "enrichment": 20.116674205877388,
+      "verification": 20.326745601596098,
+      "consumer": 19.367197946298862
+    },
+    "completed_at": "2026-04-25T03:56:18.320443+00:00"
+  },
+  {
+    "pipeline_run": 125,
+    "mode": "pull",
+    "action": "purchased",
+    "threat_type": "command_injection",
+    "source_ip": "45.33.203.149",
+    "severity": "critical",
+    "mitre_id": "T1059",
+    "actor": "APT-41",
+    "trust_score": 1.0,
+    "sale_price": 0.018,
+    "query_fee_paid": 0.002,
+    "feed": "WAF Alert",
+    "geo": {
+      "region": "Russia",
+      "lat": 57.13,
+      "lng": 34.87
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Sanitize all user inputs, disable shell execution",
+    "balances": {
+      "sensor": 19.948271433605615,
+      "enrichment": 20.121719705877386,
+      "verification": 20.3324426015961,
+      "consumer": 19.346294946298865
+    },
+    "completed_at": "2026-04-25T03:59:35.933980+00:00"
+  },
+  {
+    "pipeline_run": 126,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "spring4shell_probe",
+    "source_ip": "194.165.51.68",
+    "severity": "critical",
+    "mitre_id": "T1190",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "fingerprint": "bceda27dd4fb7d34",
+    "sale_price": 0.018,
+    "feed": "CVE Database",
+    "geo": {
+      "region": "China",
+      "lat": 37.68,
+      "lng": 116.27
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Patch Spring Framework - CVE-2022-22965",
+    "balances": {
+      "sensor": 19.953819933605615,
+      "enrichment": 20.127216705877387,
+      "verification": 20.337591101596097,
+      "consumer": 19.327843446298864
+    },
+    "completed_at": "2026-04-25T03:59:56.121754+00:00"
+  },
+  {
+    "pipeline_run": 127,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "supply_chain_inject",
+    "source_ip": "52.84.122.184",
+    "severity": "critical",
+    "mitre_id": "T1195",
+    "actor": "APT-29",
+    "trust_score": 1.0,
+    "fingerprint": "7c186731159826d1",
+    "sale_price": 0.018,
+    "feed": "Dark Web Intel",
+    "geo": {
+      "region": "Russia",
+      "lat": 57.45,
+      "lng": 35.88
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Audit all third-party dependencies immediately",
+    "balances": {
+      "sensor": 19.959368433605615,
+      "enrichment": 20.132713705877386,
+      "verification": 20.342739601596097,
+      "consumer": 19.309391946298863
+    },
+    "completed_at": "2026-04-25T04:00:57.822406+00:00"
+  },
+  {
+    "pipeline_run": 128,
+    "mode": "pull",
+    "action": "purchased",
+    "threat_type": "mitm_attack",
+    "source_ip": "172.16.100.113",
+    "severity": "critical",
+    "mitre_id": "T1557",
+    "actor": "APT-29",
+    "trust_score": 1.0,
+    "sale_price": 0.018,
+    "query_fee_paid": 0.002,
+    "feed": "Network Monitor",
+    "geo": {
+      "region": "Internal",
+      "lat": 52.1,
+      "lng": -2.77
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Enforce certificate pinning and mutual TLS",
+    "balances": {
+      "sensor": 19.965916933605612,
+      "enrichment": 20.137759205877387,
+      "verification": 20.3484366015961,
+      "consumer": 19.288488946298862
+    },
+    "completed_at": "2026-04-25T04:01:54.170437+00:00"
+  },
+  {
+    "pipeline_run": 129,
+    "mode": "pull",
+    "action": "purchased",
+    "threat_type": "ssrf_exploit",
+    "source_ip": "107.189.184.90",
+    "severity": "critical",
+    "mitre_id": "T1190",
+    "actor": "APT-41",
+    "trust_score": 1.0,
+    "sale_price": 0.018,
+    "query_fee_paid": 0.002,
+    "feed": "CVE Database",
+    "geo": {
+      "region": "China",
+      "lat": 38.68,
+      "lng": 114.74
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Block internal IP ranges in outbound requests",
+    "balances": {
+      "sensor": 19.972465433605613,
+      "enrichment": 20.152256205877386,
+      "verification": 20.354133601596097,
+      "consumer": 19.267585946298865
+    },
+    "completed_at": "2026-04-25T04:05:24.439565+00:00"
+  },
+  {
+    "pipeline_run": 130,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "zero_day_vpn",
+    "source_ip": "45.142.15.123",
+    "severity": "critical",
+    "mitre_id": "T1190",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "fingerprint": "712eb53a06e87372",
+    "sale_price": 0.018,
+    "feed": "CVE Database",
+    "geo": {
+      "region": "North Korea",
+      "lat": 39.5,
+      "lng": 127.5
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Take VPN offline pending emergency patch",
+    "balances": {
+      "sensor": 19.97791207474582,
+      "enrichment": 20.157753205877388,
+      "verification": 20.359282101596097,
+      "consumer": 19.249134446298864
+    },
+    "completed_at": "2026-04-25T04:19:34.515800+00:00"
+  },
+  {
+    "pipeline_run": 131,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "data_exfil_dns",
+    "source_ip": "203.0.86.100",
+    "severity": "critical",
+    "mitre_id": "T1048.001",
+    "actor": "APT-29",
+    "trust_score": 1.0,
+    "fingerprint": "1512c2bdf67e9bb8",
+    "sale_price": 0.018,
+    "feed": "DNS Monitor",
+    "geo": {
+      "region": "North Korea",
+      "lat": 38.96,
+      "lng": 127.85
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Deploy DNS monitoring and block suspicious queries",
+    "balances": {
+      "sensor": 19.98346057474582,
+      "enrichment": 20.163250205877386,
+      "verification": 20.364430601596098,
+      "consumer": 19.230682946298863
+    },
+    "completed_at": "2026-04-25T04:20:45.742867+00:00"
+  },
+  {
+    "pipeline_run": 132,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "dns_enumeration",
+    "source_ip": "91.108.68.157",
+    "severity": "medium",
+    "mitre_id": "T1590.002",
+    "actor": "APT-41",
+    "trust_score": 1.0,
+    "fingerprint": "d1cfadf087568fcb",
+    "sale_price": 0.008,
+    "feed": "Dark Web Intel",
+    "geo": {
+      "region": "China",
+      "lat": 41.34,
+      "lng": 118.53
+    },
+    "revenue_share": {
+      "verification": 0.0016,
+      "enrichment": 0.0024,
+      "sensor": 0.004
+    },
+    "defensive_action": "Restrict DNS zone transfers",
+    "balances": {
+      "sensor": 19.98900907474582,
+      "enrichment": 20.156295705877387,
+      "verification": 20.3675791015961,
+      "consumer": 19.222231446298863
+    },
+    "completed_at": "2026-04-25T04:21:20.345969+00:00"
+  },
+  {
+    "pipeline_run": 133,
+    "mode": "pull",
+    "action": "purchased",
+    "threat_type": "spring4shell_probe",
+    "source_ip": "194.165.42.5",
+    "severity": "critical",
+    "mitre_id": "T1190",
+    "actor": "APT-Unknown",
+    "trust_score": 1.0,
+    "sale_price": 0.018,
+    "query_fee_paid": 0.002,
+    "feed": "CVE Database",
+    "geo": {
+      "region": "China",
+      "lat": 37.35,
+      "lng": 115.61
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Patch Spring Framework - CVE-2022-22965",
+    "balances": {
+      "sensor": 19.990557574745818,
+      "enrichment": 20.161341205877385,
+      "verification": 20.373276101596097,
+      "consumer": 19.201328446298863
+    },
+    "completed_at": "2026-04-25T04:21:47.457997+00:00"
+  },
+  {
+    "pipeline_run": 134,
+    "mode": "push",
+    "action": "purchased",
+    "threat_type": "sql_injection",
+    "source_ip": "172.16.222.48",
+    "severity": "critical",
+    "mitre_id": "T1190",
+    "actor": "FIN7",
+    "trust_score": 1.0,
+    "fingerprint": "d779776f53eee96d",
+    "sale_price": 0.018,
+    "feed": "WAF Alert",
+    "geo": {
+      "region": "China",
+      "lat": 39.5,
+      "lng": 116.36
+    },
+    "revenue_share": {
+      "verification": 0.0036,
+      "enrichment": 0.0054,
+      "sensor": 0.009
+    },
+    "defensive_action": "Deploy WAF rule and patch immediately",
+    "balances": {
+      "sensor": 19.996106074745818,
+      "enrichment": 20.176289705877387,
+      "verification": 20.378424601596098,
+      "consumer": 19.182876946298865
+    },
+    "completed_at": "2026-04-25T04:22:09.954001+00:00"
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "type": "sql_injection",
+  "source_ip": "172.16.222.48",
+  "port": 80,
+  "severity": "critical",
+  "region": "China",
+  "feed": "WAF Alert",
+  "timestamp": "2026-04-25T04:21:55.007147+00:00",
+  "threat_id": "6d9b0104",
+  "sale_price": 0.018,
+  "sensor_cut": 0.009,
+  "geo": {
+    "region": "China",
+    "lat": 39.5,
+    "lng": 116.36
+  },
+  "mode": "push",
+  "enrichment": {
+    "tactic": "Initial Access",
+    "mitre_id": "T1190",
+    "known_actor": "FIN7",
+    "recommended_action": "Deploy WAF rule and patch immediately"
+  },
+  "enrichment_cut": 0.0054,
+  "confidence_score": 0.92,
+  "enriched_at": "2026-04-25T04:21:57.688481+00:00",
+  "verification": {
+    "checks": {
+      "has_source_ip": true,
+      "has_timestamp": true,
+      "has_mitre_id": true,
+      "has_confidence": true,
+      "severity_valid": true,
+      "has_actor": true,
+      "has_action": true,
+      "has_geo": true,
+      "has_feed": true
+    },
+    "trust_score": 1.0,
+    "passed": 9,
+    "total": 9,
+    "fingerprint": "d779776f53eee96d",
+    "verified": true
+  },
+  "verified_at": "2026-04-25T04:22:00.145903+00:00",
+  "listing": {
+    "listing_id": "ba853002",
+    "threat_id": "6d9b0104",
+    "threat_type": "sql_injection",
+    "severity": "critical",
+    "sale_price": 0.018,
+    "mitre_id": "T1190",
+    "tactic": "Initial Access",
+    "actor": "FIN7",
+    "trust_score": 1.0,
+    "fingerprint": "d779776f53eee96d",
+    "region": "China",
+    "feed": "WAF Alert",
+    "status": "available",
+    "listed_at": "2026-04-25T04:22:00.193625+00:00"
+  }
+}
